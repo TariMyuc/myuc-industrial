@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <!-- ============================================================
+       MYUC INDUSTRIAL · Página de Inicio
+       Sitio catálogo: no hay venta en línea, todo termina en una
+       solicitud de cotización.
+       Estructura de archivos:
+         index.html          → esta página
+         css/styles.css      → estilos globales (todas las páginas)
+         js/main.js          → menú móvil y detalles de interacción
+         img/                → logos e imágenes
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MYUC INDUSTRIAL | Suministro industrial en acero inoxidable y gases</title>
+  <meta name="description" content="MYUC INDUSTRIAL: soluciones en metales para entornos de alta exigencia. Tubería y conexiones de acero inoxidable, barras para tornería, componentes para gases criogénicos y fabricación especializada. Solicita tu cotización.">
+  <meta name="theme-color" content="#1C1F22">
+
+  <!-- SEO: URL canónica y Open Graph (lo que muestran WhatsApp, Facebook y LinkedIn al compartir) -->
+  <link rel="canonical" href="https://myucindustrial.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="MYUC INDUSTRIAL">
+  <meta property="og:url" content="https://myucindustrial.com/">
+  <meta property="og:title" content="MYUC INDUSTRIAL | Suministro industrial en acero inoxidable y gases">
+  <meta property="og:description" content="MYUC INDUSTRIAL: soluciones en metales para entornos de alta exigencia. Tubería y conexiones de acero inoxidable, barras para tornería, componentes para gases criogénicos y fabricación especializada. Solicita tu cotización.">
+  <meta property="og:image" content="https://myucindustrial.com/img/og-myuc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MYUC INDUSTRIAL · Suministro industrial en acero inoxidable y gases">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Ícono de la pestaña (usa el logo mientras se crea un favicon propio) -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fuentes del manual de marca: Montserrat (títulos), Inter (texto), IBM Plex Mono (datos técnicos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Enlace de accesibilidad: permite saltar el menú con el teclado -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============================================================
+       HEADER FIJO (fondo Negro Carbón)
+       Se repite igual en todas las páginas. En cada página nueva,
+       mover la clase "is-active" y aria-current al enlace que toque.
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo a la izquierda: versión NEGATIVA (letras claras) para fondo oscuro -->
+      <a class="brand" href="index.html" aria-label="MYUC INDUSTRIAL, ir al inicio">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="123" height="52">
+      </a>
+
+      <!-- Botón hamburguesa: solo visible en celular -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Menú y botón "Cotizar" a la derecha -->
+      <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link is-active" aria-current="page">Inicio</a></li>
+          <!-- Por ahora "Productos" baja a la sección de líneas; después puede ir a productos.html -->
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <!-- Botón principal de conversión: se cotiza cada solicitud en tiempo real -->
+        <a href="#contacto" class="btn btn-primary nav-cta">Cotizar</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============================================================
+         HERO (banner principal, fondo Negro Carbón)
+         Enfoque: ingeniería, alta presión y aplicaciones críticas.
+         Para agregar una foto de fondo, ver el comentario en
+         css/styles.css → sección "HERO".
+         ============================================================ -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="container hero-inner">
+
+        <!-- Título principal (H1): solo debe haber uno por página.
+             La línea de cobre de 3px debajo se dibuja desde el CSS. -->
+        <h1 id="hero-titulo" class="hero-title">
+          Soluciones en metales para entornos de <span class="text-copper">alta exigencia</span>
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="hero-lead">
+          Componentes para aplicaciones críticas: desde tubería y conexiones de acero inoxidable
+          y barras para tornería, hasta componentes para gases criogénicos y fabricación a medida.
+        </p>
+
+        <!-- Botones: Ver Catálogo (azul) y Solicitar cotización (transparente con borde blanco) -->
+        <div class="hero-actions">
+          <a href="#productos" class="btn btn-primary btn-lg">Ver Catálogo</a>
+          <a href="#contacto" class="btn btn-outline-light btn-lg">Solicitar cotización</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SELLOS DE CONFIANZA (franja gris oscura debajo del Hero)
+         ============================================================ -->
+    <section class="trust-bar" aria-label="Sellos de confianza">
+      <ul class="container trust-list">
+        <li class="trust-item">
+          <!-- Ícono: escudo con palomita (normas) -->
+          <svg class="trust-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <span>Normas <span class="mono">ASTM / ASME</span></span>
+        </li>
+        <li class="trust-item">
+          <!-- Ícono: documento con sello (certificados) -->
+          <svg class="trust-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h7"/>
+            <path d="M14 2v6h6M20 8v4"/>
+            <path d="M8 13h5M8 17h3"/>
+            <circle cx="18" cy="17" r="3"/>
+            <path d="m16.5 19.5-.5 2.5 2-1 2 1-.5-2.5"/>
+          </svg>
+          <span>Trazabilidad y certificados</span>
+        </li>
+        <li class="trust-item">
+          <!-- Ícono: globo de diálogo (asesoría) -->
+          <svg class="trust-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <path d="M8 9h8M8 13h5"/>
+          </svg>
+          <span>Asesoría técnica directa</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         NUESTRAS LÍNEAS DE PRODUCTO (6 tarjetas)
+         Tarjeta: fondo blanco, borde Gris Línea, título en Montserrat
+         SemiBold y datos técnicos en IBM Plex Mono.
+         Para agregar una línea nueva: copiar un <article class="product-card">
+         completo y cambiar imagen, código, nombre, datos y enlace.
+         ============================================================ -->
+    <section class="section" id="productos" aria-labelledby="productos-titulo">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="eyebrow eyebrow-dark">Catálogo</p>
+          <h2 id="productos-titulo" class="section-title">Nuestras Líneas de Producto</h2>
+          <p class="section-lead">Elige una línea para ver medidas, materiales y normas. Si no encuentras lo que buscas, pregúntanos: lo conseguimos.</p>
+        </header>
+
+        <div class="product-grid">
+
+          <!-- Tarjeta 1 · Tubería inoxidable → tuberia-inoxidable.html -->
+          <article class="product-card">
+            <div class="product-card-media">
+              <img src="img/placeholder.svg" alt="Tubería inoxidable" width="640" height="400" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-code">Línea 01</span>
+              <h3 class="product-card-title">Tubería inoxidable</h3>
+              <p class="product-card-text">Tubería cédula, sanitaria y para instrumentación, bajo norma ASTM.</p>
+              <!-- Datos técnicos (IBM Plex Mono) -->
+              <dl class="product-specs">
+                <div><dt>Material</dt><dd>Inox 304 / 316</dd></div>
+                <div><dt>Norma</dt><dd>ASTM</dd></div>
+              </dl>
+              <a href="tuberia-inoxidable.html" class="btn btn-primary product-card-btn" aria-label="Ver productos: Tubería inoxidable">Ver productos</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 · Conexiones inoxidable → conexiones-inoxidable.html -->
+          <article class="product-card">
+            <div class="product-card-media">
+              <img src="img/placeholder.svg" alt="Conexiones inoxidable" width="640" height="400" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-code">Línea 02</span>
+              <h3 class="product-card-title">Conexiones inoxidable</h3>
+              <p class="product-card-text">Codos, tees, reducciones y conexiones roscadas, soldables y de compresión.</p>
+              <!-- Datos técnicos (IBM Plex Mono) -->
+              <dl class="product-specs">
+                <div><dt>Material</dt><dd>Inox 304 / 316</dd></div>
+                <div><dt>Unión</dt><dd>Soldable · NPT · Compresión</dd></div>
+              </dl>
+              <a href="conexiones-inoxidable.html" class="btn btn-primary product-card-btn" aria-label="Ver productos: Conexiones inoxidable">Ver productos</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 · Barras y sólidos para tornería → torneria.html -->
+          <article class="product-card">
+            <div class="product-card-media">
+              <img src="img/placeholder.svg" alt="Barras y sólidos para tornería" width="640" height="400" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-code">Línea 03</span>
+              <h3 class="product-card-title">Barras y sólidos para tornería</h3>
+              <p class="product-card-text">Suministro de barras de latón, bronce, cobre y acero inoxidable en perfiles redondos, hexagonales y cuadrados para maquinado.</p>
+              <!-- Datos técnicos (IBM Plex Mono) -->
+              <dl class="product-specs">
+                <div><dt>Material</dt><dd>Latón · Bronce · Cobre · Inox</dd></div>
+                <div><dt>Perfil</dt><dd>Redondo · Hex · Cuadrado</dd></div>
+              </dl>
+              <a href="torneria.html" class="btn btn-primary product-card-btn" aria-label="Ver productos: Barras y sólidos para tornería">Ver productos</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 4 · Componentes para gases criogénicos → gases-criogenicos.html -->
+          <article class="product-card">
+            <div class="product-card-media">
+              <img src="img/placeholder.svg" alt="Componentes para gases criogénicos" width="640" height="400" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-code">Línea 04</span>
+              <h3 class="product-card-title">Componentes para gases criogénicos</h3>
+              <p class="product-card-text">Suministro de válvulas, reguladores, conexiones CGA, tuercas y refacciones para sistemas de gases criogénicos y medicinales.</p>
+              <!-- Datos técnicos (IBM Plex Mono) -->
+              <dl class="product-specs">
+                <div><dt>Aplicación</dt><dd>Criogénica · Medicinal</dd></div>
+                <div><dt>Conexiones</dt><dd>CGA</dd></div>
+              </dl>
+              <a href="gases-criogenicos.html" class="btn btn-primary product-card-btn" aria-label="Ver productos: Componentes para gases criogénicos">Ver productos</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 5 · Fabricación especializada → fabricacion.html -->
+          <article class="product-card">
+            <div class="product-card-media">
+              <img src="img/placeholder.svg" alt="Fabricación especializada" width="640" height="400" loading="lazy">
+            </div>
+            <div class="product-card-body">
+              <span class="product-code">Línea 05</span>
+              <h3 class="product-card-title">Fabricación especializada</h3>
+              <p class="product-card-text">Diseño y fabricación de racks, manifolds y soldadura de piezas especiales en acero inoxidable y latón.</p>
+              <!-- Datos técnicos (IBM Plex Mono) -->
+              <dl class="product-specs">
+                <div><dt>Material</dt><dd>Inox · Latón</dd></div>
+                <div><dt>Servicio</dt><dd>Diseño y fabricación</dd></div>
+              </dl>
+              <a href="fabricacion.html" class="btn btn-primary product-card-btn" aria-label="Ver productos: Fabricación especializada">Ver productos</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ¿POR QUÉ ELEGIR MYUC INDUSTRIAL? (fondo Gris Niebla)
+         El id="nosotros" lo usa el menú mientras no exista nosotros.html
+         ============================================================ -->
+    <section class="section section-alt" id="nosotros" aria-labelledby="porque-titulo">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="eyebrow eyebrow-dark">Nosotros</p>
+          <h2 id="porque-titulo" class="section-title">¿Por qué elegir MYUC INDUSTRIAL?</h2>
+        </header>
+
+        <div class="features-grid">
+
+          <!-- Beneficio 1 -->
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <!-- Ícono: persona con casco / asesoría -->
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                <path d="M8 9h8M8 13h5"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Asesoría técnica</h3>
+            <p class="feature-text">Te ayudamos a elegir el material, la medida y la norma adecuados para tu aplicación, antes de cotizar.</p>
+          </article>
+
+          <!-- Beneficio 2 -->
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <!-- Ícono: escudo con palomita / normas -->
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Normas <span class="mono">ASTM/ASME</span></h3>
+            <p class="feature-text">Manejamos materiales fabricados bajo normas internacionales, para que trabajes con la especificación que pide tu proyecto.</p>
+          </article>
+
+          <!-- Beneficio 3 -->
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <!-- Ícono: camión / entregas -->
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 3h15v13H1z"/>
+                <path d="M16 8h4l3 3v5h-7z"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Entregas a nivel nacional</h3>
+            <p class="feature-text">Enviamos a cualquier parte de México. Te confirmamos tiempos de entrega en cada cotización.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FORMULARIO DE COTIZACIÓN / CONTACTO (antes del footer)
+         Se envía con Formspree (no necesita servidor propio).
+         Endpoint de Formspree de MYUC INDUSTRIAL (mnpjellz).
+         Las solicitudes llegan al correo registrado en Formspree.
+         ============================================================ -->
+    <section class="section section-alt contact-section" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container contact-grid">
+
+        <!-- Columna izquierda: explicación -->
+        <div class="contact-intro">
+          <p class="eyebrow">Cotización</p>
+          <h2 id="contacto-titulo" class="section-title">Solicita tu cotización</h2>
+          <p class="section-lead">Cuéntanos qué material, medida y cantidad necesitas. Cotizamos cada solicitud en tiempo real y te respondemos con precio y tiempo de entrega.</p>
+          <ul class="contact-steps">
+            <li><span class="mono">01</span> Envía el formulario con tu requerimiento.</li>
+            <li><span class="mono">02</span> Revisamos especificación y disponibilidad.</li>
+            <li><span class="mono">03</span> Recibes tu cotización por correo.</li>
+          </ul>
+        </div>
+
+        <!-- Columna derecha: formulario -->
+        <form class="quote-form" action="https://formspree.io/f/mnpjellz" method="POST">
+          <!-- Asunto del correo que llega a la bandeja (lo usa Formspree) -->
+          <input type="hidden" name="_subject" value="Nueva solicitud de cotización · MYUC INDUSTRIAL">
+          <!-- Página a la que Formspree regresa al usuario tras enviar (main.js pone la URL completa) -->
+          <input type="hidden" name="_next" value="gracias.html">
+          <!-- Honeypot anti-spam: campo oculto que los humanos no llenan; Formspree descarta el envío si trae texto -->
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="f-nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-nombre" name="nombre" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="f-empresa">Empresa</label>
+              <input type="text" id="f-empresa" name="empresa" autocomplete="organization">
+            </div>
+
+            <div class="form-field">
+              <label for="f-correo">Correo <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="f-correo" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="f-telefono">Teléfono</label>
+              <input type="tel" id="f-telefono" name="telefono" autocomplete="tel">
+            </div>
+
+            <!-- Menú con las 6 líneas de producto -->
+            <div class="form-field">
+              <label for="f-linea">Línea de producto <span class="req" aria-hidden="true">*</span></label>
+              <select id="f-linea" name="linea_producto" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option>Tubería inoxidable</option>
+                <option>Conexiones inoxidable</option>
+                <option>Barras y sólidos para tornería</option>
+                <option>Componentes para gases criogénicos</option>
+                <option>Fabricación especializada</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="f-cantidad">Cantidad</label>
+              <input type="text" id="f-cantidad" name="cantidad" placeholder="Ej. 20 tramos, 150 kg, 10 pzas">
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="f-mensaje">Mensaje <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="5" placeholder="Medidas, norma, material, aplicación o cualquier detalle técnico" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <p class="form-note"><span class="req">*</span> Campos obligatorios. Al enviar aceptas nuestro <a href="aviso-privacidad.html">aviso de privacidad</a>.</p>
+            <button type="submit" class="btn btn-primary btn-lg">Enviar solicitud</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (fondo Negro Carbón, logo en versión negativa)
+       Datos reales del titular (persona física) y páginas legales.
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Columna 1: marca -->
+      <div class="footer-brand">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="160" height="68" loading="lazy">
+        <p>Distribuidor de materiales industriales. Solo cotizaciones, sin venta en línea.</p>
+      </div>
+
+      <!-- Columna 2: contacto -->
+      <div>
+        <p class="footer-title">Contacto</p>
+        <ul class="footer-list">
+          <li>
+            <span class="footer-label">Ventas y cotizaciones</span>
+            <a href="mailto:ventas@myucindustrial.com">ventas@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Contacto general</span>
+            <a href="mailto:contacto@myucindustrial.com">contacto@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Ubicación</span>
+            <address>Acanceh, Yucatán, México</address>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: navegación -->
+      <div>
+        <p class="footer-title">Sitio</p>
+        <ul class="footer-list footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barra inferior: titular, RFC y páginas legales -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="anio-actual">2026</span> MYUC INDUSTRIAL · AILENDY GUADALUPE CHALE HOIL · RFC CAHA980409622</p>
+        <nav class="footer-legal" aria-label="Información legal">
+          <a href="aviso-privacidad.html">Aviso de privacidad</a>
+          <a href="terminos-condiciones.html">Términos y condiciones</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript del sitio (al final para no frenar la carga) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

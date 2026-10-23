@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <!-- ============================================================
+       MYUC INDUSTRIAL · Línea 05: Fabricación especializada
+       Sitio catálogo: no hay venta en línea, todo termina en una
+       solicitud de cotización.
+       Estructura de archivos:
+         index.html          → página de inicio (con el formulario)
+         fabricacion.html    → esta página
+         css/styles.css      → estilos globales (todas las páginas)
+         js/main.js          → menú móvil y detalles de interacción
+         img/                → logos e imágenes
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabricación especializada | MYUC INDUSTRIAL</title>
+  <meta name="description" content="Diseño y fabricación de racks para cilindros, manifolds para distribución de gases y soldadura de piezas especiales en acero inoxidable y latón. Solicita tu cotización con MYUC INDUSTRIAL.">
+  <meta name="theme-color" content="#1C1F22">
+
+  <!-- SEO: URL canónica y Open Graph (lo que muestran WhatsApp, Facebook y LinkedIn al compartir) -->
+  <link rel="canonical" href="https://myucindustrial.com/fabricacion.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="MYUC INDUSTRIAL">
+  <meta property="og:url" content="https://myucindustrial.com/fabricacion.html">
+  <meta property="og:title" content="Fabricación especializada | MYUC INDUSTRIAL">
+  <meta property="og:description" content="Diseño y fabricación de racks para cilindros, manifolds para distribución de gases y soldadura de piezas especiales en acero inoxidable y latón. Solicita tu cotización con MYUC INDUSTRIAL.">
+  <meta property="og:image" content="https://myucindustrial.com/img/og-myuc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MYUC INDUSTRIAL · Suministro industrial en acero inoxidable y gases">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Ícono de la pestaña (usa el logo mientras se crea un favicon propio) -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fuentes del manual de marca: Montserrat (títulos), Inter (texto), IBM Plex Mono (datos técnicos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Enlace de accesibilidad: permite saltar el menú con el teclado -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============================================================
+       HEADER FIJO (fondo Negro Carbón)
+       Se repite igual en todas las páginas. En cada página nueva,
+       mover la clase "is-active" y aria-current al enlace que toque.
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo a la izquierda: versión NEGATIVA (letras claras) para fondo oscuro -->
+      <a class="brand" href="index.html" aria-label="MYUC INDUSTRIAL, ir al inicio">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="123" height="52">
+      </a>
+
+      <!-- Botón hamburguesa: solo visible en celular -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Menú y botón "Cotizar" a la derecha -->
+      <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <!-- En esta página "Productos" queda marcado como activo -->
+          <li><a href="index.html#productos" class="nav-link is-active" aria-current="page">Productos</a></li>
+          <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <!-- Botón principal de conversión: se cotiza cada solicitud en tiempo real -->
+        <a href="index.html?linea=Fabricaci%C3%B3n%20especializada#contacto" class="btn btn-primary nav-cta">Cotizar</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============================================================
+         HERO PEQUEÑO DE CATEGORÍA (fondo Negro Carbón)
+         ============================================================ -->
+    <section class="page-hero" aria-labelledby="pagina-titulo">
+      <div class="container">
+        <!-- Ruta de navegación (migas de pan) -->
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#productos">Productos</a></li>
+            <li aria-current="page">Fabricación especializada</li>
+          </ol>
+        </nav>
+
+        <p class="page-hero-code">Línea 05</p>
+        <h1 id="pagina-titulo" class="page-hero-title">Fabricación especializada en metales</h1>
+        <p class="page-hero-lead">Diseñamos y fabricamos racks, manifolds y piezas a medida mediante soldadura especializada.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CATÁLOGO: FILTROS (columna izquierda) + GRID DE PRODUCTOS
+         Los filtros funcionan con los atributos data-* de cada tarjeta.
+         Para agregar un producto: copiar un <article class="product-card">
+         y cambiar sus datos y atributos data-*.
+         Más adelante estas tarjetas se generarán desde productos.json.
+         ============================================================ -->
+    <section class="section catalog" aria-label="Catálogo de fabricación especializada">
+      <div class="container catalog-layout">
+
+        <!-- ---------- Filtros ---------- -->
+        <aside class="filters" aria-label="Filtros">
+          <!-- <details> permite plegar los filtros en celular -->
+          <details class="filters-box" open>
+            <summary class="filters-summary">Filtrar productos</summary>
+
+            <div class="filter-group" data-filtro="servicio">
+              <p class="filter-title">Servicio</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="racks" aria-pressed="false">Racks</button>
+                <button type="button" class="filter-chip" data-valor="manifolds" aria-pressed="false">Manifolds</button>
+                <button type="button" class="filter-chip" data-valor="soldadura" aria-pressed="false">Soldadura</button>
+                <button type="button" class="filter-chip" data-valor="diseno" aria-pressed="false">Diseño a medida</button>
+              </div>
+            </div>
+            <div class="filter-group" data-filtro="material">
+              <p class="filter-title">Material</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="inox" aria-pressed="false">Acero inoxidable</button>
+                <button type="button" class="filter-chip" data-valor="laton" aria-pressed="false">Latón</button>
+                <button type="button" class="filter-chip" data-valor="acero" aria-pressed="false">Acero al carbón</button>
+              </div>
+            </div>
+
+            <button type="button" class="filters-clear" id="limpiar-filtros">Limpiar filtros</button>
+          </details>
+        </aside>
+
+        <!-- ---------- Productos ---------- -->
+        <div class="catalog-main">
+          <div class="catalog-toolbar">
+            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 4 productos</p>
+          </div>
+
+          <div class="product-grid product-grid-2" id="grid-productos">
+
+            <!-- Producto 1 · Racks para cilindros de gas -->
+            <article class="product-card" data-servicio="racks" data-material="inox acero">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Rack para cilindros de gas" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Racks</span>
+                <h3 class="product-card-title">Racks para cilindros de gas</h3>
+                <dl class="product-specs">
+                  <div><dt>Capacidad</dt><dd>2 a 12 cilindros</dd></div>
+                  <div><dt>Material</dt><dd>Inox o acero al carbón</dd></div>
+                  <div><dt>Montaje</dt><dd>Piso o pared</dd></div>
+                </dl>
+                <a href="index.html?linea=Fabricaci%C3%B3n%20especializada&amp;producto=Racks%20para%20cilindros%20de%20gas#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Racks para cilindros de gas">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Producto 2 · Manifolds para distribución de gases -->
+            <article class="product-card" data-servicio="manifolds" data-material="laton inox">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Manifold para distribución de gases" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Manifolds</span>
+                <h3 class="product-card-title">Manifolds para distribución de gases</h3>
+                <dl class="product-specs">
+                  <div><dt>Cilindros</dt><dd>2 a 10 por lado</dd></div>
+                  <div><dt>Material</dt><dd>Latón / Inox 316</dd></div>
+                  <div><dt>Presión</dt><dd>Hasta 3,000 psi</dd></div>
+                </dl>
+                <a href="index.html?linea=Fabricaci%C3%B3n%20especializada&amp;producto=Manifolds%20para%20distribuci%C3%B3n%20de%20gases#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Manifolds para distribución de gases">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Producto 3 · Soldadura de piezas especiales -->
+            <article class="product-card" data-servicio="soldadura" data-material="inox laton">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Soldadura de pieza especial en acero inoxidable" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Soldadura</span>
+                <h3 class="product-card-title">Soldadura de piezas especiales</h3>
+                <dl class="product-specs">
+                  <div><dt>Proceso</dt><dd>TIG</dd></div>
+                  <div><dt>Material</dt><dd>Inox · Latón</dd></div>
+                  <div><dt>Volumen</dt><dd>Pieza única o serie</dd></div>
+                </dl>
+                <a href="index.html?linea=Fabricaci%C3%B3n%20especializada&amp;producto=Soldadura%20de%20piezas%20especiales#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Soldadura de piezas especiales">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Producto 4 · Diseño de sistemas a medida -->
+            <article class="product-card" data-servicio="diseno" data-material="inox laton acero">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Diseño de sistema a medida" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Diseño</span>
+                <h3 class="product-card-title">Diseño de sistemas a medida</h3>
+                <dl class="product-specs">
+                  <div><dt>Partimos de</dt><dd>Tu plano o muestra</dd></div>
+                  <div><dt>Entregamos</dt><dd>Propuesta y plano</dd></div>
+                  <div><dt>Alcance</dt><dd>Diseño y fabricación</dd></div>
+                </dl>
+                <a href="index.html?linea=Fabricaci%C3%B3n%20especializada&amp;producto=Dise%C3%B1o%20de%20sistemas%20a%20medida#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Diseño de sistemas a medida">Solicitar cotización</a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Mensaje cuando ningún producto coincide con los filtros -->
+          <div class="catalog-empty" id="sin-resultados" hidden>
+            <p>No hay productos con esa combinación de filtros.</p>
+            <a href="index.html?linea=Fabricaci%C3%B3n%20especializada#contacto" class="btn btn-primary">Pídenos lo que buscas</a>
+          </div>
+
+          <!-- Aviso: datos de referencia -->
+          <p class="catalog-note">
+            <span class="mono">*</span> Especificaciones de referencia. Confirmamos medida, material
+            y norma en cada cotización.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (fondo Negro Carbón, logo en versión negativa)
+       Datos reales del titular (persona física) y páginas legales.
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Columna 1: marca -->
+      <div class="footer-brand">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="160" height="68" loading="lazy">
+        <p>Distribuidor de materiales industriales. Solo cotizaciones, sin venta en línea.</p>
+      </div>
+
+      <!-- Columna 2: contacto -->
+      <div>
+        <p class="footer-title">Contacto</p>
+        <ul class="footer-list">
+          <li>
+            <span class="footer-label">Ventas y cotizaciones</span>
+            <a href="mailto:ventas@myucindustrial.com">ventas@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Contacto general</span>
+            <a href="mailto:contacto@myucindustrial.com">contacto@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Ubicación</span>
+            <address>Acanceh, Yucatán, México</address>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: navegación -->
+      <div>
+        <p class="footer-title">Sitio</p>
+        <ul class="footer-list footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#productos">Productos</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barra inferior: titular, RFC y páginas legales -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="anio-actual">2026</span> MYUC INDUSTRIAL · AILENDY GUADALUPE CHALE HOIL · RFC CAHA980409622</p>
+        <nav class="footer-legal" aria-label="Información legal">
+          <a href="aviso-privacidad.html">Aviso de privacidad</a>
+          <a href="terminos-condiciones.html">Términos y condiciones</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript del sitio (al final para no frenar la carga) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

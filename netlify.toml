@@ -1,0 +1,37 @@
+# Configuración de Netlify para MYUC INDUSTRIAL
+# Sitio estático: sin comando de build, se publica la raíz tal cual.
+
+[build]
+  publish = "."
+
+# Caché larga para archivos estáticos. Si cambias css/styles.css o js/main.js,
+# cambia también el sufijo ?v= en los <link>/<script> de las páginas
+# (o renombra el archivo) para que el navegador descargue la versión nueva.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Las páginas HTML se revalidan siempre, para que los cambios se vean al momento.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cabeceras de seguridad básicas
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"

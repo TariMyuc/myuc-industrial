@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <!-- ============================================================
+       MYUC INDUSTRIAL · Línea 04: Componentes para gases criogénicos
+       Sitio catálogo: no hay venta en línea, todo termina en una
+       solicitud de cotización.
+       Estructura de archivos:
+         index.html          → página de inicio (con el formulario)
+         gases-criogenicos.html→ esta página
+         css/styles.css      → estilos globales (todas las páginas)
+         js/main.js          → menú móvil y detalles de interacción
+         img/                → logos e imágenes
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Componentes para gases criogénicos | MYUC INDUSTRIAL</title>
+  <meta name="description" content="Válvulas y reguladores para oxígeno medicinal, conexiones y tuercas CGA de alta presión, válvulas de alivio para tanques criogénicos y refacciones para marcas especializadas. Solicita tu cotización con MYUC INDUSTRIAL.">
+  <meta name="theme-color" content="#1C1F22">
+
+  <!-- SEO: URL canónica y Open Graph (lo que muestran WhatsApp, Facebook y LinkedIn al compartir) -->
+  <link rel="canonical" href="https://myucindustrial.com/gases-criogenicos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="MYUC INDUSTRIAL">
+  <meta property="og:url" content="https://myucindustrial.com/gases-criogenicos.html">
+  <meta property="og:title" content="Componentes para gases criogénicos | MYUC INDUSTRIAL">
+  <meta property="og:description" content="Válvulas y reguladores para oxígeno medicinal, conexiones y tuercas CGA de alta presión, válvulas de alivio para tanques criogénicos y refacciones para marcas especializadas. Solicita tu cotización con MYUC INDUSTRIAL.">
+  <meta property="og:image" content="https://myucindustrial.com/img/og-myuc.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MYUC INDUSTRIAL · Suministro industrial en acero inoxidable y gases">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Ícono de la pestaña (usa el logo mientras se crea un favicon propio) -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fuentes del manual de marca: Montserrat (títulos), Inter (texto), IBM Plex Mono (datos técnicos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Enlace de accesibilidad: permite saltar el menú con el teclado -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============================================================
+       HEADER FIJO (fondo Negro Carbón)
+       Se repite igual en todas las páginas. En cada página nueva,
+       mover la clase "is-active" y aria-current al enlace que toque.
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo a la izquierda: versión NEGATIVA (letras claras) para fondo oscuro -->
+      <a class="brand" href="index.html" aria-label="MYUC INDUSTRIAL, ir al inicio">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="123" height="52">
+      </a>
+
+      <!-- Botón hamburguesa: solo visible en celular -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Menú y botón "Cotizar" a la derecha -->
+      <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <!-- En esta página "Productos" queda marcado como activo -->
+          <li><a href="index.html#productos" class="nav-link is-active" aria-current="page">Productos</a></li>
+          <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <!-- Botón principal de conversión: se cotiza cada solicitud en tiempo real -->
+        <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos#contacto" class="btn btn-primary nav-cta">Cotizar</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============================================================
+         HERO PEQUEÑO DE CATEGORÍA (fondo Negro Carbón)
+         ============================================================ -->
+    <section class="page-hero" aria-labelledby="pagina-titulo">
+      <div class="container">
+        <!-- Ruta de navegación (migas de pan) -->
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#productos">Productos</a></li>
+            <li aria-current="page">Componentes para gases criogénicos</li>
+          </ol>
+        </nav>
+
+        <p class="page-hero-code">Línea 04</p>
+        <h1 id="pagina-titulo" class="page-hero-title">Componentes para gases criogénicos y medicinales</h1>
+        <p class="page-hero-lead">Válvulas, reguladores, conexiones CGA y refacciones para sistemas críticos. Asesoría técnica especializada.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CATÁLOGO: FILTROS (columna izquierda) + GRID DE PRODUCTOS
+         Los filtros funcionan con los atributos data-* de cada tarjeta.
+         Para agregar un producto: copiar un <article class="product-card">
+         y cambiar sus datos y atributos data-*.
+         Más adelante estas tarjetas se generarán desde productos.json.
+         ============================================================ -->
+    <section class="section catalog" aria-label="Catálogo de componentes para gases criogénicos">
+      <div class="container catalog-layout">
+
+        <!-- ---------- Filtros ---------- -->
+        <aside class="filters" aria-label="Filtros">
+          <!-- <details> permite plegar los filtros en celular -->
+          <details class="filters-box" open>
+            <summary class="filters-summary">Filtrar productos</summary>
+
+            <div class="filter-group" data-filtro="tipo">
+              <p class="filter-title">Tipo de componente</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="regulador" aria-pressed="false">Regulador</button>
+                <button type="button" class="filter-chip" data-valor="cga" aria-pressed="false">Conexión CGA</button>
+                <button type="button" class="filter-chip" data-valor="alivio" aria-pressed="false">Válvula de alivio</button>
+                <button type="button" class="filter-chip" data-valor="refaccion" aria-pressed="false">Refacción</button>
+              </div>
+            </div>
+            <div class="filter-group" data-filtro="gas">
+              <p class="filter-title">Gas</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="oxigeno" aria-pressed="false">Oxígeno</button>
+                <button type="button" class="filter-chip" data-valor="nitrogeno" aria-pressed="false">Nitrógeno</button>
+                <button type="button" class="filter-chip" data-valor="argon" aria-pressed="false">Argón</button>
+                <button type="button" class="filter-chip" data-valor="co2" aria-pressed="false">CO₂</button>
+              </div>
+            </div>
+            <div class="filter-group" data-filtro="aplicacion">
+              <p class="filter-title">Aplicación</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="medicinal" aria-pressed="false">Medicinal</button>
+                <button type="button" class="filter-chip" data-valor="industrial" aria-pressed="false">Industrial</button>
+                <button type="button" class="filter-chip" data-valor="criogenica" aria-pressed="false">Criogénica</button>
+              </div>
+            </div>
+
+            <button type="button" class="filters-clear" id="limpiar-filtros">Limpiar filtros</button>
+          </details>
+        </aside>
+
+        <!-- ---------- Productos ---------- -->
+        <div class="catalog-main">
+          <div class="catalog-toolbar">
+            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 4 productos</p>
+          </div>
+
+          <div class="product-grid product-grid-2" id="grid-productos">
+
+            <!-- Producto 1 · Regulador para oxígeno medicinal -->
+            <article class="product-card" data-tipo="regulador" data-gas="oxigeno" data-aplicacion="medicinal">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Regulador para oxígeno medicinal" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Regulador</span>
+                <h3 class="product-card-title">Regulador para oxígeno medicinal</h3>
+                <dl class="product-specs">
+                  <div><dt>Entrada máx.</dt><dd>3,000 psi</dd></div>
+                  <div><dt>Flujo</dt><dd>0 – 15 L/min</dd></div>
+                  <div><dt>Conexión</dt><dd>CGA 540 / 870</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Regulador%20para%20ox%C3%ADgeno%20medicinal#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Regulador para oxígeno medicinal">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Producto 2 · Conexiones y tuercas CGA de alta presión -->
+            <article class="product-card" data-tipo="cga" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="medicinal industrial">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Conexiones y tuercas CGA de latón para alta presión" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Conexión CGA</span>
+                <h3 class="product-card-title">Conexiones y tuercas CGA de alta presión</h3>
+                <dl class="product-specs">
+                  <div><dt>Estándar</dt><dd>CGA 320 · 540 · 580</dd></div>
+                  <div><dt>Presión</dt><dd>Hasta 3,000 psi</dd></div>
+                  <div><dt>Material</dt><dd>Latón</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Conexiones%20y%20tuercas%20CGA%20de%20alta%20presi%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Conexiones y tuercas CGA de alta presión">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Producto 3 · Válvula de alivio para tanque criogénico -->
+            <article class="product-card" data-tipo="alivio" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="criogenica">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Válvula de alivio para tanque criogénico" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Alivio</span>
+                <h3 class="product-card-title">Válvula de alivio para tanque criogénico</h3>
+                <dl class="product-specs">
+                  <div><dt>Ajuste</dt><dd>22 – 350 psi</dd></div>
+                  <div><dt>Temperatura</dt><dd>-196 °C</dd></div>
+                  <div><dt>Material</dt><dd>Latón / Bronce</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=V%C3%A1lvula%20de%20alivio%20para%20tanque%20criog%C3%A9nico#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvula de alivio para tanque criogénico">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Producto 4 · Refacciones para marcas especializadas -->
+            <article class="product-card" data-tipo="refaccion" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="medicinal industrial criogenica">
+              <div class="product-card-media">
+                <img src="img/placeholder.svg" alt="Refacciones y componentes para reguladores y manifolds" width="640" height="400" loading="lazy">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Refacción</span>
+                <h3 class="product-card-title">Refacciones para marcas especializadas</h3>
+                <dl class="product-specs">
+                  <div><dt>Marcas</dt><dd>Principales del sector</dd></div>
+                  <div><dt>Tipo</dt><dd>Kits, asientos, empaques</dd></div>
+                  <div><dt>Uso</dt><dd>Reguladores y manifolds</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Refacciones%20para%20marcas%20especializadas#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Refacciones para marcas especializadas">Solicitar cotización</a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Mensaje cuando ningún producto coincide con los filtros -->
+          <div class="catalog-empty" id="sin-resultados" hidden>
+            <p>No hay productos con esa combinación de filtros.</p>
+            <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos#contacto" class="btn btn-primary">Pídenos lo que buscas</a>
+          </div>
+
+          <!-- Aviso: datos de referencia -->
+          <p class="catalog-note">
+            <span class="mono">*</span> Especificaciones de referencia. Confirmamos medida, material
+            y norma en cada cotización.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (fondo Negro Carbón, logo en versión negativa)
+       Datos reales del titular (persona física) y páginas legales.
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Columna 1: marca -->
+      <div class="footer-brand">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="160" height="68" loading="lazy">
+        <p>Distribuidor de materiales industriales. Solo cotizaciones, sin venta en línea.</p>
+      </div>
+
+      <!-- Columna 2: contacto -->
+      <div>
+        <p class="footer-title">Contacto</p>
+        <ul class="footer-list">
+          <li>
+            <span class="footer-label">Ventas y cotizaciones</span>
+            <a href="mailto:ventas@myucindustrial.com">ventas@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Contacto general</span>
+            <a href="mailto:contacto@myucindustrial.com">contacto@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Ubicación</span>
+            <address>Acanceh, Yucatán, México</address>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: navegación -->
+      <div>
+        <p class="footer-title">Sitio</p>
+        <ul class="footer-list footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#productos">Productos</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barra inferior: titular, RFC y páginas legales -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="anio-actual">2026</span> MYUC INDUSTRIAL · AILENDY GUADALUPE CHALE HOIL · RFC CAHA980409622</p>
+        <nav class="footer-legal" aria-label="Información legal">
+          <a href="aviso-privacidad.html">Aviso de privacidad</a>
+          <a href="terminos-condiciones.html">Términos y condiciones</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript del sitio (al final para no frenar la carga) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

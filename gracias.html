@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <!-- ============================================================
+       MYUC INDUSTRIAL · Gracias (confirmación del formulario)
+       Sitio catálogo: no hay venta en línea, todo termina en una
+       solicitud de cotización.
+       Estructura de archivos:
+         index.html          → página de inicio (con el formulario)
+         gracias.html → esta página
+         css/styles.css      → estilos globales (todas las páginas)
+         js/main.js          → menú móvil y detalles de interacción
+         img/                → logos e imágenes
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitud enviada | MYUC INDUSTRIAL</title>
+  <meta name="description" content="Recibimos tu solicitud de cotización. MYUC INDUSTRIAL te responde por correo con precio y tiempo de entrega.">
+  <meta name="theme-color" content="#1C1F22">
+  <meta name="robots" content="noindex">
+
+  <!-- Ícono de la pestaña (usa el logo mientras se crea un favicon propio) -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fuentes del manual de marca: Montserrat (títulos), Inter (texto), IBM Plex Mono (datos técnicos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Enlace de accesibilidad: permite saltar el menú con el teclado -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============================================================
+       HEADER FIJO (fondo Negro Carbón)
+       Se repite igual en todas las páginas. En cada página nueva,
+       mover la clase "is-active" y aria-current al enlace que toque.
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo a la izquierda: versión NEGATIVA (letras claras) para fondo oscuro -->
+      <a class="brand" href="index.html" aria-label="MYUC INDUSTRIAL, ir al inicio">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="123" height="52">
+      </a>
+
+      <!-- Botón hamburguesa: solo visible en celular -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Menú y botón "Cotizar" a la derecha -->
+      <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <!-- En esta página "Productos" queda marcado como activo -->
+          <li><a href="index.html#productos" class="nav-link">Productos</a></li>
+          <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <!-- Botón principal de conversión: se cotiza cada solicitud en tiempo real -->
+        <a href="index.html?linea=Tuber%C3%ADa%20inoxidable#contacto" class="btn btn-primary nav-cta">Cotizar</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO PEQUEÑO -->
+    <section class="page-hero" aria-labelledby="pagina-titulo">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li aria-current="page">Solicitud enviada</li>
+          </ol>
+        </nav>
+        <p class="page-hero-code">Cotización</p>
+        <h1 id="pagina-titulo" class="page-hero-title">Recibimos tu solicitud</h1>
+        <p class="page-hero-lead">En breve te respondemos por correo con tu cotización.</p>
+      </div>
+    </section>
+
+    <!-- MENSAJE DE CONFIRMACIÓN (Formspree regresa aquí tras enviar el formulario) -->
+    <section class="section legal">
+      <div class="container legal-body">
+        <h2>Recibimos tu solicitud</h2>
+        <p>Gracias por escribirnos. Ya tenemos tu requerimiento y lo estamos revisando. <strong>Te respondemos por correo con precio y tiempo de entrega</strong>, normalmente el mismo día hábil.</p>
+        <ul>
+          <li>Revisamos la especificación y la disponibilidad del material.</li>
+          <li>Preparamos tu cotización con vigencia y condiciones.</li>
+          <li>Te la enviamos al correo que indicaste en el formulario.</li>
+        </ul>
+        <p>Si tu solicitud es urgente o quieres agregar un detalle, escríbenos directo a <a href="mailto:ventas@myucindustrial.com">ventas@myucindustrial.com</a>.</p>
+        <p class="legal-fecha"><a href="index.html#productos" class="btn btn-primary">Volver al catálogo</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (fondo Negro Carbón, logo en versión negativa)
+       Datos reales del titular (persona física) y páginas legales.
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <!-- Columna 1: marca -->
+      <div class="footer-brand">
+        <img src="img/myuc-logo-negativo.svg" alt="MYUC INDUSTRIAL" width="160" height="68" loading="lazy">
+        <p>Distribuidor de materiales industriales. Solo cotizaciones, sin venta en línea.</p>
+      </div>
+
+      <!-- Columna 2: contacto -->
+      <div>
+        <p class="footer-title">Contacto</p>
+        <ul class="footer-list">
+          <li>
+            <span class="footer-label">Ventas y cotizaciones</span>
+            <a href="mailto:ventas@myucindustrial.com">ventas@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Contacto general</span>
+            <a href="mailto:contacto@myucindustrial.com">contacto@myucindustrial.com</a>
+          </li>
+          <li>
+            <span class="footer-label">Ubicación</span>
+            <address>Acanceh, Yucatán, México</address>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: navegación -->
+      <div>
+        <p class="footer-title">Sitio</p>
+        <ul class="footer-list footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#productos">Productos</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Barra inferior: titular, RFC y páginas legales -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="anio-actual">2026</span> MYUC INDUSTRIAL · AILENDY GUADALUPE CHALE HOIL · RFC CAHA980409622</p>
+        <nav class="footer-legal" aria-label="Información legal">
+          <a href="aviso-privacidad.html">Aviso de privacidad</a>
+          <a href="terminos-condiciones.html">Términos y condiciones</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript del sitio (al final para no frenar la carga) -->
+  <script src="js/main.js"></script>
+</body>
+</html>
