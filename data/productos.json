@@ -5,45 +5,472 @@
       "codigo": "Línea 01",
       "nombre": "Tubería inoxidable",
       "pagina": "tuberia-inoxidable.html",
-      "descripcion": "Tubería cédula, sanitaria y para instrumentación, bajo norma ASTM."
+      "descripcion": "Tubo sanitario, tubing para instrumentación, tubo ornamental y tubo cédula en acero inoxidable 304 y 316, bajo normas ASTM.",
+      "filtros": [
+        {
+          "clave": "tipo",
+          "titulo": "Tipo de tubería",
+          "valores": [
+            {
+              "valor": "sanitaria",
+              "etiqueta": "Sanitaria"
+            },
+            {
+              "valor": "instrumentacion",
+              "etiqueta": "Instrumentación (tubing)"
+            },
+            {
+              "valor": "ornamental",
+              "etiqueta": "Ornamental"
+            },
+            {
+              "valor": "cedula",
+              "etiqueta": "Cédula"
+            }
+          ]
+        },
+        {
+          "clave": "material",
+          "titulo": "Material",
+          "valores": [
+            {
+              "valor": "inox304",
+              "etiqueta": "Inoxidable 304 / 304L"
+            },
+            {
+              "valor": "inox316",
+              "etiqueta": "Inoxidable 316 / 316L"
+            }
+          ]
+        },
+        {
+          "clave": "costura",
+          "titulo": "Costura",
+          "valores": [
+            {
+              "valor": "con",
+              "etiqueta": "Con costura"
+            },
+            {
+              "valor": "sin",
+              "etiqueta": "Sin costura"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "conexiones-inoxidable",
       "codigo": "Línea 02",
       "nombre": "Conexiones inoxidable",
       "pagina": "conexiones-inoxidable.html",
-      "descripcion": "Codos, tees, reducciones y conexiones roscadas, soldables y de compresión."
+      "descripcion": "Conexiones clamp, soldables, roscadas NPT y de compresión, además de válvulas sanitarias, en acero inoxidable 304 y 316L.",
+      "filtros": [
+        {
+          "clave": "union",
+          "titulo": "Tipo de unión",
+          "valores": [
+            {
+              "valor": "clamp",
+              "etiqueta": "Clamp"
+            },
+            {
+              "valor": "soldable",
+              "etiqueta": "Soldable"
+            },
+            {
+              "valor": "roscada",
+              "etiqueta": "Roscada NPT"
+            },
+            {
+              "valor": "compresion",
+              "etiqueta": "Compresión (doble férula)"
+            },
+            {
+              "valor": "valvula",
+              "etiqueta": "Válvula sanitaria"
+            }
+          ]
+        },
+        {
+          "clave": "material",
+          "titulo": "Material",
+          "valores": [
+            {
+              "valor": "inox304",
+              "etiqueta": "Inoxidable 304"
+            },
+            {
+              "valor": "inox316",
+              "etiqueta": "Inoxidable 316L"
+            }
+          ]
+        },
+        {
+          "clave": "uso",
+          "titulo": "Uso",
+          "valores": [
+            {
+              "valor": "sanitario",
+              "etiqueta": "Sanitario"
+            },
+            {
+              "valor": "instrumentacion",
+              "etiqueta": "Instrumentación"
+            },
+            {
+              "valor": "proceso",
+              "etiqueta": "Proceso"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "torneria",
       "codigo": "Línea 03",
       "nombre": "Barras y sólidos para tornería",
       "pagina": "torneria.html",
-      "descripcion": "Suministro de barras de latón, bronce, cobre y acero inoxidable en perfiles redondos, hexagonales y cuadrados para maquinado."
+      "descripcion": "Barras, soleras y placas de latón, bronce, cobre, acero inoxidable, aluminio, aceros al carbón y herramienta, y plásticos de ingeniería para maquinado.",
+      "filtros": [
+        {
+          "clave": "material",
+          "titulo": "Material",
+          "valores": [
+            {
+              "valor": "laton",
+              "etiqueta": "Latón"
+            },
+            {
+              "valor": "bronce",
+              "etiqueta": "Bronce"
+            },
+            {
+              "valor": "cobre",
+              "etiqueta": "Cobre"
+            },
+            {
+              "valor": "inox",
+              "etiqueta": "Acero inoxidable"
+            },
+            {
+              "valor": "aluminio",
+              "etiqueta": "Aluminio"
+            },
+            {
+              "valor": "acero",
+              "etiqueta": "Acero al carbón y herramienta"
+            },
+            {
+              "valor": "plastico",
+              "etiqueta": "Plástico de ingeniería"
+            }
+          ]
+        },
+        {
+          "clave": "perfil",
+          "titulo": "Perfil",
+          "valores": [
+            {
+              "valor": "redondo",
+              "etiqueta": "Redondo"
+            },
+            {
+              "valor": "hexagonal",
+              "etiqueta": "Hexagonal"
+            },
+            {
+              "valor": "cuadrado",
+              "etiqueta": "Cuadrado"
+            },
+            {
+              "valor": "solera",
+              "etiqueta": "Solera"
+            },
+            {
+              "valor": "placa",
+              "etiqueta": "Placa"
+            },
+            {
+              "valor": "buje",
+              "etiqueta": "Buje / tubo"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "gases-criogenicos",
       "codigo": "Línea 04",
       "nombre": "Componentes para gases criogénicos",
       "pagina": "gases-criogenicos.html",
-      "descripcion": "Suministro de válvulas, reguladores, conexiones CGA, tuercas y refacciones para sistemas de gases criogénicos y medicinales."
+      "descripcion": "Reguladores, válvulas check, válvulas de alivio, válvulas de cilindro, conexiones CGA y refacciones para sistemas de gases criogénicos, industriales y medicinales.",
+      "filtros": [
+        {
+          "clave": "tipo",
+          "titulo": "Tipo de componente",
+          "valores": [
+            {
+              "valor": "regulador",
+              "etiqueta": "Regulador"
+            },
+            {
+              "valor": "check",
+              "etiqueta": "Válvula check"
+            },
+            {
+              "valor": "alivio",
+              "etiqueta": "Válvula de alivio"
+            },
+            {
+              "valor": "cilindro",
+              "etiqueta": "Válvula de cilindro"
+            },
+            {
+              "valor": "cga",
+              "etiqueta": "Conexión CGA"
+            },
+            {
+              "valor": "refaccion",
+              "etiqueta": "Refacción"
+            }
+          ]
+        },
+        {
+          "clave": "gas",
+          "titulo": "Gas",
+          "valores": [
+            {
+              "valor": "oxigeno",
+              "etiqueta": "Oxígeno"
+            },
+            {
+              "valor": "nitrogeno",
+              "etiqueta": "Nitrógeno"
+            },
+            {
+              "valor": "argon",
+              "etiqueta": "Argón"
+            },
+            {
+              "valor": "co2",
+              "etiqueta": "CO₂"
+            },
+            {
+              "valor": "n2o",
+              "etiqueta": "N₂O"
+            },
+            {
+              "valor": "hidrogeno",
+              "etiqueta": "Hidrógeno"
+            }
+          ]
+        },
+        {
+          "clave": "aplicacion",
+          "titulo": "Aplicación",
+          "valores": [
+            {
+              "valor": "medicinal",
+              "etiqueta": "Medicinal"
+            },
+            {
+              "valor": "industrial",
+              "etiqueta": "Industrial"
+            },
+            {
+              "valor": "criogenica",
+              "etiqueta": "Criogénica"
+            }
+          ]
+        },
+        {
+          "clave": "material",
+          "titulo": "Material",
+          "valores": [
+            {
+              "valor": "laton",
+              "etiqueta": "Latón"
+            },
+            {
+              "valor": "inox",
+              "etiqueta": "Acero inoxidable"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "fabricacion",
       "codigo": "Línea 05",
       "nombre": "Fabricación especializada",
       "pagina": "fabricacion.html",
-      "descripcion": "Diseño y fabricación de racks, manifolds y soldadura de piezas especiales en acero inoxidable y latón."
+      "descripcion": "Diseño y fabricación de racks, manifolds y soldadura de piezas especiales en acero inoxidable y latón.",
+      "filtros": [
+        {
+          "clave": "servicio",
+          "titulo": "Servicio",
+          "valores": [
+            {
+              "valor": "racks",
+              "etiqueta": "Racks"
+            },
+            {
+              "valor": "manifolds",
+              "etiqueta": "Manifolds"
+            },
+            {
+              "valor": "soldadura",
+              "etiqueta": "Soldadura"
+            },
+            {
+              "valor": "diseno",
+              "etiqueta": "Diseño a medida"
+            }
+          ]
+        },
+        {
+          "clave": "material",
+          "titulo": "Material",
+          "valores": [
+            {
+              "valor": "inox",
+              "etiqueta": "Acero inoxidable"
+            },
+            {
+              "valor": "laton",
+              "etiqueta": "Latón"
+            },
+            {
+              "valor": "acero",
+              "etiqueta": "Acero al carbón"
+            }
+          ]
+        }
+      ]
     }
   ],
   "productos": [
+    {
+      "id": "tubo-sanitario",
+      "nombre": "Tubo sanitario pulido",
+      "categoria": "Sanitaria",
+      "linea": "tuberia-inoxidable",
+      "imagen": "img/productos/tubo-sanitario.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Tubo pulido para industria alimentaria, farmacéutica y de bebidas.",
+      "alt": "Tubo sanitario de acero inoxidable pulido",
+      "especificaciones": [
+        {
+          "nombre": "Norma",
+          "valor": "ASTM A270 · 3A"
+        },
+        {
+          "nombre": "Material",
+          "valor": "304L / 316L"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "½\" a 10\", cal. 12-16"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "sanitaria"
+        ],
+        "material": [
+          "inox304",
+          "inox316"
+        ],
+        "costura": [
+          "con"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "tubing-instrumentacion",
+      "nombre": "Tubing para instrumentación",
+      "categoria": "Instrumentación",
+      "linea": "tuberia-inoxidable",
+      "imagen": "img/productos/tubing-instrumentacion.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Tubing de pared controlada para líneas de instrumentación, gases y alta presión.",
+      "alt": "Tubing de acero inoxidable para instrumentación",
+      "especificaciones": [
+        {
+          "nombre": "Norma",
+          "valor": "ASTM A269"
+        },
+        {
+          "nombre": "Material",
+          "valor": "304 / 316"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "1/16\" a 2\", cal. 16-20"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "instrumentacion"
+        ],
+        "material": [
+          "inox304",
+          "inox316"
+        ],
+        "costura": [
+          "con",
+          "sin"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "tubo-ornamental",
+      "nombre": "Tubo ornamental",
+      "categoria": "Ornamental",
+      "linea": "tuberia-inoxidable",
+      "imagen": "img/productos/tubo-ornamental.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Tubo pulido para barandales, herrería y mobiliario. No apto para conducir fluidos.",
+      "alt": "Tubo ornamental de acero inoxidable redondo y cuadrado",
+      "especificaciones": [
+        {
+          "nombre": "Norma",
+          "valor": "ASTM A554"
+        },
+        {
+          "nombre": "Material",
+          "valor": "304, acabado P-180"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "½\" a 4\", cal. 11-18"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "ornamental"
+        ],
+        "material": [
+          "inox304"
+        ],
+        "costura": [
+          "con"
+        ]
+      },
+      "activo": true
+    },
     {
       "id": "tubo-cedula",
       "nombre": "Tubo inoxidable cédula",
       "categoria": "Cédula",
       "linea": "tuberia-inoxidable",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Tubo para conducción de fluidos y gases en líneas de proceso, disponible en cédulas 10, 40 y 80.",
+      "imagen": "img/productos/tubo-cedula.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Tubo para conducción de fluidos y gases en líneas de proceso, cédulas 10, 40 y 80.",
+      "alt": "Tubo de acero inoxidable cédula",
       "especificaciones": [
         {
           "nombre": "Norma",
@@ -55,7 +482,11 @@
         },
         {
           "nombre": "Medida",
-          "valor": "1/2\" a 8\""
+          "valor": "½\" a 8\""
+        },
+        {
+          "nombre": "Disponibilidad",
+          "valor": "Bajo pedido"
         }
       ],
       "filtros": {
@@ -65,48 +496,60 @@
         "material": [
           "inox304",
           "inox316"
+        ],
+        "costura": [
+          "con",
+          "sin"
         ]
       },
       "activo": true
     },
     {
-      "id": "tubing-instrumentacion",
-      "nombre": "Tubing para instrumentación",
-      "categoria": "Instrumentación",
-      "linea": "tuberia-inoxidable",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Tubo sin costura de diámetro pequeño para líneas de instrumentación, muestreo y gases a alta presión.",
+      "id": "conexion-clamp",
+      "nombre": "Conexiones clamp sanitarias",
+      "categoria": "Clamp",
+      "linea": "conexiones-inoxidable",
+      "imagen": "img/productos/conexion-clamp.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Ferrules, codos, abrazaderas y empaques clamp para líneas sanitarias desmontables.",
+      "alt": "Codos y ferrules clamp de acero inoxidable sanitario",
       "especificaciones": [
         {
           "nombre": "Norma",
-          "valor": "ASTM A269"
+          "valor": "3A · DIN"
         },
         {
           "nombre": "Material",
-          "valor": "316"
+          "valor": "304 / 316L"
         },
         {
-          "nombre": "Diámetro ext.",
-          "valor": "1/8\" a 1\""
+          "nombre": "Medida",
+          "valor": "½\" a 6\""
         }
       ],
       "filtros": {
-        "tipo": [
-          "instrumentacion"
+        "union": [
+          "clamp"
         ],
         "material": [
+          "inox304",
           "inox316"
+        ],
+        "uso": [
+          "sanitario"
         ]
       },
       "activo": true
     },
     {
-      "id": "tubo-sanitario",
-      "nombre": "Tubo sanitario pulido",
-      "categoria": "Sanitaria",
-      "linea": "tuberia-inoxidable",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Tubo con acabado pulido para industria alimentaria, farmacéutica y de bebidas.",
+      "id": "codo-soldable",
+      "nombre": "Codo soldable a tope 90° / 45°",
+      "categoria": "Soldable",
+      "linea": "conexiones-inoxidable",
+      "imagen": "img/productos/codo-soldable.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Codos de radio largo con extremos lisos para soldadura a tope.",
+      "alt": "Codo de acero inoxidable con extremos lisos para soldar",
       "especificaciones": [
         {
           "nombre": "Norma",
@@ -118,39 +561,7 @@
         },
         {
           "nombre": "Medida",
-          "valor": "1\" a 4\""
-        }
-      ],
-      "filtros": {
-        "tipo": [
-          "sanitaria"
-        ],
-        "material": [
-          "inox304",
-          "inox316"
-        ]
-      },
-      "activo": true
-    },
-    {
-      "id": "codo-soldable",
-      "nombre": "Codo 90° soldable",
-      "categoria": "Soldable",
-      "linea": "conexiones-inoxidable",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Codo de radio largo para soldar a tope en tubería cédula.",
-      "especificaciones": [
-        {
-          "nombre": "Norma",
-          "valor": "ASTM A403"
-        },
-        {
-          "nombre": "Material",
-          "valor": "304 / 316"
-        },
-        {
-          "nombre": "Medida",
-          "valor": "1/2\" a 8\""
+          "valor": "½\" a 6\""
         }
       ],
       "filtros": {
@@ -160,6 +571,49 @@
         "material": [
           "inox304",
           "inox316"
+        ],
+        "uso": [
+          "sanitario",
+          "proceso"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "tee-reduccion-sanitaria",
+      "nombre": "Tee, yee y reducción sanitaria",
+      "categoria": "Tee y reducción",
+      "linea": "conexiones-inoxidable",
+      "imagen": "img/productos/tee-reduccion-sanitaria.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Tees, yees y reducciones concéntricas y excéntricas, en versión clamp o soldable.",
+      "alt": "Tee y reducción concéntrica de acero inoxidable sanitario",
+      "especificaciones": [
+        {
+          "nombre": "Unión",
+          "valor": "Clamp o soldable"
+        },
+        {
+          "nombre": "Material",
+          "valor": "304 / 316L"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "½\" a 6\""
+        }
+      ],
+      "filtros": {
+        "union": [
+          "clamp",
+          "soldable"
+        ],
+        "material": [
+          "inox304",
+          "inox316"
+        ],
+        "uso": [
+          "sanitario",
+          "proceso"
         ]
       },
       "activo": true
@@ -169,20 +623,22 @@
       "nombre": "Conexión roscada NPT",
       "categoria": "Roscada",
       "linea": "conexiones-inoxidable",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Tees, codos, coples y tapones roscados para líneas de alta presión.",
+      "imagen": "img/productos/conexion-roscada.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Niples, coples, codos y reducciones con rosca NPT para líneas de proceso.",
+      "alt": "Niples, coples y codos roscados de acero inoxidable",
       "especificaciones": [
         {
-          "nombre": "Clase",
-          "valor": "3000 lb"
+          "nombre": "Rosca",
+          "valor": "NPT"
         },
         {
           "nombre": "Material",
-          "valor": "316"
+          "valor": "304 / 316"
         },
         {
           "nombre": "Medida",
-          "valor": "1/8\" a 2\""
+          "valor": "¼\" a 2\""
         }
       ],
       "filtros": {
@@ -190,30 +646,36 @@
           "roscada"
         ],
         "material": [
+          "inox304",
           "inox316"
+        ],
+        "uso": [
+          "proceso"
         ]
       },
       "activo": true
     },
     {
       "id": "conexion-compresion",
-      "nombre": "Conexión de compresión",
+      "nombre": "Conector de compresión doble férula",
       "categoria": "Compresión",
       "linea": "conexiones-inoxidable",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Conexión de doble férula para tubing de instrumentación, sin soldadura.",
+      "imagen": "img/productos/conexion-compresion.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Uniones, codos y tees de doble férula para tubing de instrumentación sin soldadura.",
+      "alt": "Conector de compresión de doble férula para tubing",
       "especificaciones": [
         {
-          "nombre": "Tipo",
-          "valor": "Doble férula"
+          "nombre": "Para tubing",
+          "valor": "⅛\" a 1\""
         },
         {
           "nombre": "Material",
           "valor": "316"
         },
         {
-          "nombre": "Tubing",
-          "valor": "1/8\" a 1\""
+          "nombre": "Presión",
+          "valor": "Hasta 6,000 psi"
         }
       ],
       "filtros": {
@@ -222,37 +684,46 @@
         ],
         "material": [
           "inox316"
+        ],
+        "uso": [
+          "instrumentacion"
         ]
       },
       "activo": true
     },
     {
-      "id": "barra-laton-hexagonal",
-      "nombre": "Barra de latón hexagonal",
-      "categoria": "Latón",
-      "linea": "torneria",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Latón de corte libre en perfil hexagonal, ideal para tuercas, conectores y piezas de torno automático.",
+      "id": "valvula-sanitaria",
+      "nombre": "Válvulas sanitarias",
+      "categoria": "Válvula",
+      "linea": "conexiones-inoxidable",
+      "imagen": "img/productos/valvula-sanitaria.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Válvulas mariposa, esfera de 2 y 3 vías y check con extremos clamp para líneas sanitarias.",
+      "alt": "Válvula mariposa sanitaria de acero inoxidable con extremos clamp",
       "especificaciones": [
         {
-          "nombre": "Medida",
-          "valor": "1/4\" a 2\" entre caras"
+          "nombre": "Tipos",
+          "valor": "Mariposa · Esfera · Check"
         },
         {
-          "nombre": "Aleación",
-          "valor": "C36000"
+          "nombre": "Material",
+          "valor": "316L"
         },
         {
-          "nombre": "Largo",
-          "valor": "3.66 m"
+          "nombre": "Extremos",
+          "valor": "Clamp ½\" a 4\""
         }
       ],
       "filtros": {
-        "material": [
-          "laton"
+        "union": [
+          "valvula",
+          "clamp"
         ],
-        "perfil": [
-          "hexagonal"
+        "material": [
+          "inox316"
+        ],
+        "uso": [
+          "sanitario"
         ]
       },
       "activo": true
@@ -262,20 +733,22 @@
       "nombre": "Barra de latón redonda",
       "categoria": "Latón",
       "linea": "torneria",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Barra redonda de latón de fácil maquinado para bujes, pernos y piezas torneadas.",
+      "imagen": "img/productos/barra-laton-redonda.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Latón de maquinado libre para piezas torneadas, conexiones y herrajes.",
+      "alt": "Barras redondas de latón de distintos diámetros",
       "especificaciones": [
         {
-          "nombre": "Diámetro",
-          "valor": "1/8\" a 4\""
-        },
-        {
           "nombre": "Aleación",
-          "valor": "C36000"
+          "valor": "C360 maquinado libre"
         },
         {
-          "nombre": "Largo",
-          "valor": "3.66 m"
+          "nombre": "Medida",
+          "valor": "3/32\" a 4\""
+        },
+        {
+          "nombre": "Tramo",
+          "valor": "3 m"
         }
       ],
       "filtros": {
@@ -289,24 +762,61 @@
       "activo": true
     },
     {
-      "id": "barra-bronce-fosforado",
-      "nombre": "Barra de bronce fosforado",
-      "categoria": "Bronce",
+      "id": "barra-laton-hexagonal",
+      "nombre": "Barra de latón hexagonal y cuadrada",
+      "categoria": "Latón",
       "linea": "torneria",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Bronce con buena resistencia al desgaste para bujes, cojinetes y piezas sometidas a fricción.",
+      "imagen": "img/productos/barra-laton-hexagonal.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Perfil hexagonal y cuadrado para tuercas, racores y piezas con cara plana.",
+      "alt": "Barras hexagonales de latón",
       "especificaciones": [
         {
-          "nombre": "Diámetro",
-          "valor": "1/4\" a 3\""
-        },
-        {
           "nombre": "Aleación",
-          "valor": "C54400"
+          "valor": "C360 maquinado libre"
         },
         {
-          "nombre": "Largo",
-          "valor": "3.66 m"
+          "nombre": "Medida",
+          "valor": "⅛\" a 2\""
+        },
+        {
+          "nombre": "Perfiles",
+          "valor": "Hexagonal · Cuadrado · Solera"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "laton"
+        ],
+        "perfil": [
+          "hexagonal",
+          "cuadrado",
+          "solera"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "barra-bronce-sae660",
+      "nombre": "Barra y buje de bronce SAE 660 / SAE 64",
+      "categoria": "Bronce",
+      "linea": "torneria",
+      "imagen": "img/productos/barra-bronce-sae660.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Bronce al estaño para bujes, chumaceras y piezas de desgaste; buje prelubricado en existencia.",
+      "alt": "Barra maciza y buje de bronce",
+      "especificaciones": [
+        {
+          "nombre": "Aleaciones",
+          "valor": "SAE 660 · SAE 64 · SAE 40"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "⅜\" a 3\""
+        },
+        {
+          "nombre": "Formas",
+          "valor": "Barra · Buje · Placa"
         }
       ],
       "filtros": {
@@ -314,30 +824,34 @@
           "bronce"
         ],
         "perfil": [
-          "redondo"
+          "redondo",
+          "buje",
+          "placa"
         ]
       },
       "activo": true
     },
     {
       "id": "barra-inox-303",
-      "nombre": "Barra de acero inoxidable 303",
+      "nombre": "Barra de acero inoxidable 303 / 304 / 316",
       "categoria": "Inoxidable",
       "linea": "torneria",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Inoxidable de maquinado libre para piezas resistentes a la corrosión en torno y CNC.",
+      "imagen": "img/productos/barra-inox-303.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Inoxidable 303 de maquinado libre; 304 y 316 para piezas en contacto con fluidos.",
+      "alt": "Barras de acero inoxidable redondas y hexagonales",
       "especificaciones": [
         {
-          "nombre": "Diámetro",
-          "valor": "1/4\" a 4\""
+          "nombre": "Grados",
+          "valor": "303 · 304 · 316 · 416"
         },
         {
-          "nombre": "Aleación",
-          "valor": "AISI 303"
+          "nombre": "Redonda",
+          "valor": "¼\" a 6\""
         },
         {
-          "nombre": "Acabado",
-          "valor": "Estirado en frío"
+          "nombre": "Hexagonal / cuadrada",
+          "valor": "¼\" a 2\""
         }
       ],
       "filtros": {
@@ -345,30 +859,177 @@
           "inox"
         ],
         "perfil": [
-          "redondo"
+          "redondo",
+          "hexagonal",
+          "cuadrado"
         ]
       },
       "activo": true
     },
     {
-      "id": "regulador-oxigeno-medicinal",
-      "nombre": "Regulador para oxígeno medicinal",
-      "categoria": "Regulador",
-      "linea": "gases-criogenicos",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Regulador con flujómetro para cilindros de oxígeno de uso medicinal.",
+      "id": "barra-cobre",
+      "nombre": "Barra y solera de cobre",
+      "categoria": "Cobre",
+      "linea": "torneria",
+      "imagen": "img/productos/barra-cobre.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Cobre electrolítico para conductores y piezas eléctricas; aleaciones de berilio y cromo bajo pedido.",
+      "alt": "Barra redonda y solera de cobre",
       "especificaciones": [
         {
-          "nombre": "Entrada máx.",
-          "valor": "3,000 psi"
+          "nombre": "Aleaciones",
+          "valor": "1100 · 172 · 18150"
         },
         {
-          "nombre": "Flujo",
-          "valor": "0 – 15 L/min"
+          "nombre": "Redonda",
+          "valor": "3/16\" a 3\""
         },
+        {
+          "nombre": "Solera",
+          "valor": "⅛×⅜\" a ½×4\""
+        }
+      ],
+      "filtros": {
+        "material": [
+          "cobre"
+        ],
+        "perfil": [
+          "redondo",
+          "cuadrado",
+          "solera"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "barra-placa-aluminio",
+      "nombre": "Barra y placa de aluminio 6061 / 7075",
+      "categoria": "Aluminio",
+      "linea": "torneria",
+      "imagen": "img/productos/barra-placa-aluminio.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Aluminio 6061 T6 para uso general y 7075 para alta resistencia; también 6063 y 1100.",
+      "alt": "Barra redonda y placa de aluminio",
+      "especificaciones": [
+        {
+          "nombre": "Aleaciones",
+          "valor": "6061 · 7075 · 6063"
+        },
+        {
+          "nombre": "Formas",
+          "valor": "Barra redonda · Placa · Solera"
+        },
+        {
+          "nombre": "Uso",
+          "valor": "Estructural y maquinado"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "aluminio"
+        ],
+        "perfil": [
+          "redondo",
+          "placa",
+          "solera"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "barra-acero-4140",
+      "nombre": "Acero al carbón y grado herramienta",
+      "categoria": "Acero",
+      "linea": "torneria",
+      "imagen": "img/productos/barra-acero-4140.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Aceros 1018, 1045 y 4140T para flechas y piezas mecánicas; D2, O1 y H13 para herramental.",
+      "alt": "Barras de acero al carbón y grado herramienta",
+      "especificaciones": [
+        {
+          "nombre": "Carbón y aleados",
+          "valor": "1018 · 1045 · 4140T"
+        },
+        {
+          "nombre": "Herramienta",
+          "valor": "D2 · O1 · H13 · P20"
+        },
+        {
+          "nombre": "Formas",
+          "valor": "Barra · Placa"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "acero"
+        ],
+        "perfil": [
+          "redondo",
+          "placa",
+          "cuadrado"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "nylamid-acetal",
+      "nombre": "Plásticos de ingeniería",
+      "categoria": "Plástico",
+      "linea": "torneria",
+      "imagen": "img/productos/nylamid-acetal.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Nylamid, acetal y UHMW para bujes, guías, engranes y piezas de bajo desgaste.",
+      "alt": "Barra y placa de Nylamid y acetal",
+      "especificaciones": [
+        {
+          "nombre": "Materiales",
+          "valor": "Nylamid · Acetal · UHMW (TIVAR)"
+        },
+        {
+          "nombre": "Formas",
+          "valor": "Barra · Placa"
+        },
+        {
+          "nombre": "Uso",
+          "valor": "Bujes, guías, engranes"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "plastico"
+        ],
+        "perfil": [
+          "redondo",
+          "placa"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "regulador-presurizacion",
+      "nombre": "Regulador de presurización para tanque criogénico",
+      "categoria": "Regulador",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/regulador-presurizacion.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Regulador de alto caudal y cierre rápido para el circuito de presurización (pressure build) de tanques y cilindros de líquido criogénico.",
+      "alt": "Regulador de presurización para tanque criogénico",
+      "especificaciones": [
         {
           "nombre": "Conexión",
-          "valor": "CGA 540 / 870"
+          "valor": "½\" NPT"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "15 a 600 psi"
+        },
+        {
+          "nombre": "Temperatura",
+          "valor": "-196 a 93 °C, limpio para O₂"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · Chart · RegO"
         }
       ],
       "filtros": {
@@ -376,10 +1037,442 @@
           "regulador"
         ],
         "gas": [
-          "oxigeno"
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
         ],
         "aplicacion": [
+          "criogenica",
+          "industrial"
+        ],
+        "material": [
+          "laton"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "regulador-economizador",
+      "nombre": "Regulador economizador / de contrapresión",
+      "categoria": "Regulador",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/regulador-economizador.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Economizador tipo diafragma que ventea el exceso de presión y reduce la pérdida de producto en cilindros y sistemas criogénicos.",
+      "alt": "Regulador economizador de contrapresión",
+      "especificaciones": [
+        {
+          "nombre": "Conexión",
+          "valor": "¼\" NPT"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "15 a 600 psi"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Latón, internos inox 303"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · RegO"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "regulador"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "criogenica"
+        ],
+        "material": [
+          "laton",
+          "inox"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "regulador-linea-final",
+      "nombre": "Regulador de línea final para cilindro líquido",
+      "categoria": "Regulador",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/regulador-linea-final.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Regulación final de la presión de uso a la salida de cilindros de líquido criogénico y líneas de CO₂.",
+      "alt": "Regulador de línea final para cilindro de líquido criogénico",
+      "especificaciones": [
+        {
+          "nombre": "Conexión",
+          "valor": "¼\" NPT + puertos de manómetro"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "15 a 525 psi"
+        },
+        {
+          "nombre": "Temperatura",
+          "valor": "-196 a 93 °C"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · RegO"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "regulador"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "criogenica",
+          "industrial"
+        ],
+        "material": [
+          "laton"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "regulador-oxigeno-medicinal",
+      "nombre": "Regulador de entrega para oxígeno y CO₂",
+      "categoria": "Regulador",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/regulador-oxigeno-medicinal.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Regulador balanceado de presión de salida constante para líneas de oxígeno medicinal, CO₂ y gases industriales.",
+      "alt": "Regulador de entrega de gas para oxígeno y CO₂",
+      "especificaciones": [
+        {
+          "nombre": "Conexión",
+          "valor": "¼\" a 1\" NPT"
+        },
+        {
+          "nombre": "Salida",
+          "valor": "0 a 450 psi"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Latón, sellos EPDM para CO₂"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · Harris · Victor"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "regulador"
+        ],
+        "gas": [
+          "oxigeno",
+          "co2",
+          "nitrogeno",
+          "argon"
+        ],
+        "aplicacion": [
+          "medicinal",
+          "industrial"
+        ],
+        "material": [
+          "laton"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "valvula-check-criogenica",
+      "nombre": "Válvula check criogénica de alta presión",
+      "categoria": "Válvula check",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/valvula-check-criogenica.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Evita el flujo inverso en líneas criogénicas y de alta presión; apta para oxígeno, inertes e hidrógeno.",
+      "alt": "Válvula check criogénica de alta presión",
+      "especificaciones": [
+        {
+          "nombre": "Conexión",
+          "valor": "½\" y ¾\" NPT"
+        },
+        {
+          "nombre": "Presión máx.",
+          "valor": "7,000 psi"
+        },
+        {
+          "nombre": "Apertura",
+          "valor": "5 psi, latón CDA-360"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · RegO"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "check"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "hidrogeno"
+        ],
+        "aplicacion": [
+          "criogenica",
+          "industrial"
+        ],
+        "material": [
+          "laton"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "valvula-alivio-laton",
+      "nombre": "Válvula de alivio criogénica de latón",
+      "categoria": "Válvula de alivio",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/valvula-alivio-laton.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Protección contra sobrepresión por bloqueo de línea; ajuste sellado de fábrica y limpia para oxígeno.",
+      "alt": "Válvula de alivio criogénica de latón",
+      "especificaciones": [
+        {
+          "nombre": "Entrada",
+          "valor": "¼\", ⅜\" y ½\" NPT"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "10 a 750 psi"
+        },
+        {
+          "nombre": "Temperatura",
+          "valor": "-196 °C"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · RegO · Chart"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "alivio"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "criogenica",
+          "industrial"
+        ],
+        "material": [
+          "laton"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "valvula-alivio-inox",
+      "nombre": "Válvula de alivio criogénica de acero inoxidable",
+      "categoria": "Válvula de alivio",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/valvula-alivio-inox.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Construcción totalmente inoxidable para servicio con hidrógeno, oxígeno y criogenia profunda.",
+      "alt": "Válvula de alivio criogénica de acero inoxidable",
+      "especificaciones": [
+        {
+          "nombre": "Entrada",
+          "valor": "¼\" y ½\" NPT o doble férula"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "10 a 750 psi"
+        },
+        {
+          "nombre": "Temperatura",
+          "valor": "Hasta -254 °C"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "alivio"
+        ],
+        "gas": [
+          "hidrogeno",
+          "oxigeno",
+          "nitrogeno",
+          "argon"
+        ],
+        "aplicacion": [
+          "criogenica"
+        ],
+        "material": [
+          "inox"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "valvula-alivio-asme",
+      "nombre": "Válvula de alivio con certificación ASME",
+      "categoria": "Válvula de alivio",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/valvula-alivio-asme.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Para instalaciones que exigen dispositivo de alivio codificado ASME (BPVC Sección XIII), con sello UV.",
+      "alt": "Válvula de alivio con sello ASME UV",
+      "especificaciones": [
+        {
+          "nombre": "Entrada",
+          "valor": "¼\", ⅜\" y ½\" NPT"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "20 a 550 psi"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Latón o inox 316"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · RegO"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "alivio"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "industrial",
+          "criogenica"
+        ],
+        "material": [
+          "laton",
+          "inox"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "valvula-cilindro-liquido",
+      "nombre": "Válvula de presión para cilindro líquido DOT 4L",
+      "categoria": "Válvula de cilindro",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/valvula-cilindro-liquido.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Regula la presión del cilindro liberando sólo el gas necesario, con descarga silenciosa conforme a OSHA.",
+      "alt": "Válvula de presión para cilindro criogénico de líquido",
+      "especificaciones": [
+        {
+          "nombre": "Conexión",
+          "valor": "¼\" NPT"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "22 a 500 psi"
+        },
+        {
+          "nombre": "Cilindros",
+          "valor": "DOT 4L"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant · Chart"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "cilindro"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "criogenica",
           "medicinal"
+        ],
+        "material": [
+          "laton"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "conexion-cga-antimanipulacion",
+      "nombre": "Conexión CGA antimanipulación",
+      "categoria": "Conexión CGA",
+      "linea": "gases-criogenicos",
+      "imagen": "img/productos/conexion-cga-antimanipulacion.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Se instala en las salidas de uso, venteo y llenado del cilindro; una vez puesta no puede retirarse sin inutilizar la salida.",
+      "alt": "Conexión CGA antimanipulación para cilindro criogénico",
+      "especificaciones": [
+        {
+          "nombre": "CGA",
+          "valor": "540 · 580 · 320 · 326"
+        },
+        {
+          "nombre": "Presión máx.",
+          "valor": "3,000 psi"
+        },
+        {
+          "nombre": "Uso",
+          "valor": "Industrial y medicinal"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Generant"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "cga"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2",
+          "n2o"
+        ],
+        "aplicacion": [
+          "medicinal",
+          "industrial"
+        ],
+        "material": [
+          "laton",
+          "inox"
         ]
       },
       "activo": true
@@ -389,12 +1482,14 @@
       "nombre": "Conexiones y tuercas CGA de alta presión",
       "categoria": "Conexión CGA",
       "linea": "gases-criogenicos",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Tuercas, niples y adaptadores CGA para conexiones de alta presión entre cilindros, reguladores y manifolds.",
+      "imagen": "img/productos/conexiones-tuercas-cga.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Tuercas, niples y adaptadores CGA para cilindros de oxígeno, inertes y CO₂.",
+      "alt": "Conexiones y tuercas CGA de latón para alta presión",
       "especificaciones": [
         {
-          "nombre": "Estándar",
-          "valor": "CGA 320 · 540 · 580"
+          "nombre": "CGA",
+          "valor": "540 · 580 · 320 · 346"
         },
         {
           "nombre": "Presión",
@@ -403,6 +1498,10 @@
         {
           "nombre": "Material",
           "valor": "Latón"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Varios fabricantes"
         }
       ],
       "filtros": {
@@ -418,66 +1517,34 @@
         "aplicacion": [
           "medicinal",
           "industrial"
+        ],
+        "material": [
+          "laton"
         ]
       },
       "activo": true
     },
     {
-      "id": "valvula-alivio-tanque-criogenico",
-      "nombre": "Válvula de alivio para tanque criogénico",
-      "categoria": "Alivio",
-      "linea": "gases-criogenicos",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Protege termos y tanques de líquidos criogénicos liberando el exceso de presión.",
-      "especificaciones": [
-        {
-          "nombre": "Ajuste",
-          "valor": "22 – 350 psi"
-        },
-        {
-          "nombre": "Temperatura",
-          "valor": "-196 °C"
-        },
-        {
-          "nombre": "Material",
-          "valor": "Latón / Bronce"
-        }
-      ],
-      "filtros": {
-        "tipo": [
-          "alivio"
-        ],
-        "gas": [
-          "oxigeno",
-          "nitrogeno",
-          "argon",
-          "co2"
-        ],
-        "aplicacion": [
-          "criogenica"
-        ]
-      },
-      "activo": true
-    },
-    {
-      "id": "refacciones-marcas-especializadas",
-      "nombre": "Refacciones para marcas especializadas",
+      "id": "refacciones-criogenicas",
+      "nombre": "Refacciones y kits de reparación",
       "categoria": "Refacción",
       "linea": "gases-criogenicos",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Kits de reparación, asientos, empaques y componentes para equipos de las principales marcas especializadas en gases.",
+      "imagen": "img/productos/refacciones-criogenicas.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Kits de sello y resorte, diafragmas, filtros de entrada y asientos para reguladores, válvulas y manifolds.",
+      "alt": "Refacciones y kits de reparación para reguladores y válvulas criogénicas",
       "especificaciones": [
         {
-          "nombre": "Marcas",
-          "valor": "Principales del sector"
-        },
-        {
           "nombre": "Tipo",
-          "valor": "Kits, asientos, empaques"
+          "valor": "Kits de sello · Resortes · Diafragmas"
         },
         {
           "nombre": "Uso",
-          "valor": "Reguladores y manifolds"
+          "valor": "Reguladores, válvulas y manifolds"
+        },
+        {
+          "nombre": "Marcas disponibles",
+          "valor": "Según el equipo a reparar"
         }
       ],
       "filtros": {
@@ -494,6 +1561,10 @@
           "medicinal",
           "industrial",
           "criogenica"
+        ],
+        "material": [
+          "laton",
+          "inox"
         ]
       },
       "activo": true
@@ -503,20 +1574,22 @@
       "nombre": "Racks para cilindros de gas",
       "categoria": "Racks",
       "linea": "fabricacion",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Racks de piso o pared para almacenar y asegurar cilindros de gas de forma ordenada.",
+      "imagen": "img/productos/rack-cilindros.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Racks fijos y móviles para almacenar y transportar cilindros de gas con seguridad.",
+      "alt": "Rack para cilindros de gas",
       "especificaciones": [
         {
           "nombre": "Capacidad",
-          "valor": "2 a 12 cilindros"
+          "valor": "6 a 16 cilindros"
         },
         {
           "nombre": "Material",
-          "valor": "Inox o acero al carbón"
+          "valor": "Acero al carbón o inox"
         },
         {
-          "nombre": "Montaje",
-          "valor": "Piso o pared"
+          "nombre": "Acabado",
+          "valor": "Pintura industrial / pulido"
         }
       ],
       "filtros": {
@@ -535,20 +1608,22 @@
       "nombre": "Manifolds para distribución de gases",
       "categoria": "Manifolds",
       "linea": "fabricacion",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Cabezales para conectar varios cilindros a una sola línea de suministro.",
+      "imagen": "img/productos/manifold-gases.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Manifolds para centralizar cilindros y distribuir gas a varios puntos de consumo, con válvulas y manómetros.",
+      "alt": "Manifold para distribución de gases",
       "especificaciones": [
         {
-          "nombre": "Cilindros",
-          "valor": "2 a 10 por lado"
-        },
-        {
           "nombre": "Material",
-          "valor": "Latón / Inox 316"
+          "valor": "Latón / inox 316"
         },
         {
           "nombre": "Presión",
           "valor": "Hasta 3,000 psi"
+        },
+        {
+          "nombre": "Salidas",
+          "valor": "2 a 12"
         }
       ],
       "filtros": {
@@ -567,20 +1642,22 @@
       "nombre": "Soldadura de piezas especiales",
       "categoria": "Soldadura",
       "linea": "fabricacion",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Soldadura y reparación de piezas especiales en acero inoxidable y latón.",
+      "imagen": "img/productos/soldadura-piezas-especiales.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Soldadura TIG de piezas, soportes y ensambles en acero inoxidable y latón.",
+      "alt": "Soldadura de pieza especial en acero inoxidable",
       "especificaciones": [
         {
           "nombre": "Proceso",
-          "valor": "TIG"
+          "valor": "TIG / MIG"
         },
         {
-          "nombre": "Material",
-          "valor": "Inox · Latón"
+          "nombre": "Materiales",
+          "valor": "Inox · Latón · Acero"
         },
         {
-          "nombre": "Volumen",
-          "valor": "Pieza única o serie"
+          "nombre": "Acabado",
+          "valor": "Pulido sanitario opcional"
         }
       ],
       "filtros": {
@@ -599,20 +1676,22 @@
       "nombre": "Diseño de sistemas a medida",
       "categoria": "Diseño",
       "linea": "fabricacion",
-      "imagen": "img/placeholder.svg",
-      "descripcion": "Diseñamos el sistema según tu proceso y lo fabricamos con los componentes de nuestro catálogo.",
+      "imagen": "img/productos/diseno-sistemas-medida.jpg",
+      "imagen_respaldo": "img/placeholder.svg",
+      "descripcion": "Levantamiento, diseño y fabricación de sistemas de tubería y distribución de gases según tu planta.",
+      "alt": "Diseño de sistema a medida",
       "especificaciones": [
         {
-          "nombre": "Partimos de",
-          "valor": "Tu plano o muestra"
+          "nombre": "Entrega",
+          "valor": "Plano + fabricación"
         },
         {
-          "nombre": "Entregamos",
-          "valor": "Propuesta y plano"
+          "nombre": "Materiales",
+          "valor": "Inox · Latón · Acero"
         },
         {
           "nombre": "Alcance",
-          "valor": "Diseño y fabricación"
+          "valor": "Desde el levantamiento"
         }
       ],
       "filtros": {

@@ -102,7 +102,7 @@
 
         <p class="page-hero-code">Línea 01</p>
         <h1 id="pagina-titulo" class="page-hero-title">Tubería de acero inoxidable</h1>
-        <p class="page-hero-lead">Tubería cédula, sanitaria y para instrumentación en acero inoxidable 304 y 316, fabricada bajo normas ASTM para conducción de fluidos y gases en procesos industriales.</p>
+        <p class="page-hero-lead">Tubo sanitario, tubing para instrumentación y tubo ornamental en acero inoxidable 304 y 316, bajo normas ASTM. Tubo cédula bajo pedido.</p>
       </div>
     </section>
 
@@ -125,18 +125,27 @@
             <div class="filter-group" data-filtro="tipo">
               <p class="filter-title">Tipo de tubería</p>
               <div class="filter-options">
-                <button type="button" class="filter-chip" data-valor="cedula" aria-pressed="false">Cédula</button>
-                <button type="button" class="filter-chip" data-valor="instrumentacion" aria-pressed="false">Instrumentación</button>
                 <button type="button" class="filter-chip" data-valor="sanitaria" aria-pressed="false">Sanitaria</button>
+                <button type="button" class="filter-chip" data-valor="instrumentacion" aria-pressed="false">Instrumentación (tubing)</button>
+                <button type="button" class="filter-chip" data-valor="ornamental" aria-pressed="false">Ornamental</button>
+                <button type="button" class="filter-chip" data-valor="cedula" aria-pressed="false">Cédula</button>
               </div>
             </div>
             <div class="filter-group" data-filtro="material">
               <p class="filter-title">Material</p>
               <div class="filter-options">
-                <button type="button" class="filter-chip" data-valor="inox304" aria-pressed="false">Inoxidable 304</button>
-                <button type="button" class="filter-chip" data-valor="inox316" aria-pressed="false">Inoxidable 316</button>
+                <button type="button" class="filter-chip" data-valor="inox304" aria-pressed="false">Inoxidable 304 / 304L</button>
+                <button type="button" class="filter-chip" data-valor="inox316" aria-pressed="false">Inoxidable 316 / 316L</button>
               </div>
             </div>
+            <div class="filter-group" data-filtro="costura">
+              <p class="filter-title">Costura</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="con" aria-pressed="false">Con costura</button>
+                <button type="button" class="filter-chip" data-valor="sin" aria-pressed="false">Sin costura</button>
+              </div>
+            </div>
+
 
             <button type="button" class="filters-clear" id="limpiar-filtros">Limpiar filtros</button>
           </details>
@@ -145,15 +154,63 @@
         <!-- ---------- Productos ---------- -->
         <div class="catalog-main">
           <div class="catalog-toolbar">
-            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 3 productos</p>
+            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 4 productos</p>
           </div>
 
           <div class="product-grid product-grid-2" id="grid-productos">
 
-            <!-- Producto 1 · Tubo inoxidable cédula -->
-            <article class="product-card" data-tipo="cedula" data-material="inox304 inox316">
+            <!-- Tubo sanitario pulido -->
+            <article class="product-card" data-tipo="sanitaria" data-material="inox304 inox316" data-costura="con">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Tubo de acero inoxidable cédula" width="640" height="400" loading="lazy">
+                <img src="img/productos/tubo-sanitario.jpg" alt="Tubo sanitario de acero inoxidable pulido" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Sanitaria</span>
+                <h3 class="product-card-title">Tubo sanitario pulido</h3>
+                <dl class="product-specs">
+                  <div><dt>Norma</dt><dd>ASTM A270 · 3A</dd></div>
+                  <div><dt>Material</dt><dd>304L / 316L</dd></div>
+                  <div><dt>Medida</dt><dd>½&quot; a 10&quot;, cal. 12-16</dd></div>
+                </dl>
+                <a href="index.html?linea=Tuber%C3%ADa%20inoxidable&amp;producto=Tubo%20sanitario%20pulido#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Tubo sanitario pulido">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Tubing para instrumentación -->
+            <article class="product-card" data-tipo="instrumentacion" data-material="inox304 inox316" data-costura="con sin">
+              <div class="product-card-media">
+                <img src="img/productos/tubing-instrumentacion.jpg" alt="Tubing de acero inoxidable para instrumentación" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Instrumentación</span>
+                <h3 class="product-card-title">Tubing para instrumentación</h3>
+                <dl class="product-specs">
+                  <div><dt>Norma</dt><dd>ASTM A269</dd></div>
+                  <div><dt>Material</dt><dd>304 / 316</dd></div>
+                  <div><dt>Medida</dt><dd>1/16&quot; a 2&quot;, cal. 16-20</dd></div>
+                </dl>
+                <a href="index.html?linea=Tuber%C3%ADa%20inoxidable&amp;producto=Tubing%20para%20instrumentaci%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Tubing para instrumentación">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Tubo ornamental -->
+            <article class="product-card" data-tipo="ornamental" data-material="inox304" data-costura="con">
+              <div class="product-card-media">
+                <img src="img/productos/tubo-ornamental.jpg" alt="Tubo ornamental de acero inoxidable redondo y cuadrado" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Ornamental</span>
+                <h3 class="product-card-title">Tubo ornamental</h3>
+                <dl class="product-specs">
+                  <div><dt>Norma</dt><dd>ASTM A554</dd></div>
+                  <div><dt>Material</dt><dd>304, acabado P-180</dd></div>
+                  <div><dt>Medida</dt><dd>½&quot; a 4&quot;, cal. 11-18</dd></div>
+                </dl>
+                <a href="index.html?linea=Tuber%C3%ADa%20inoxidable&amp;producto=Tubo%20ornamental#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Tubo ornamental">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Tubo inoxidable cédula -->
+            <article class="product-card" data-tipo="cedula" data-material="inox304 inox316" data-costura="con sin">
+              <div class="product-card-media">
+                <img src="img/productos/tubo-cedula.jpg" alt="Tubo de acero inoxidable cédula" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Cédula</span>
@@ -161,41 +218,10 @@
                 <dl class="product-specs">
                   <div><dt>Norma</dt><dd>ASTM A312</dd></div>
                   <div><dt>Material</dt><dd>304 / 316L</dd></div>
-                  <div><dt>Medida</dt><dd>1/2&quot; a 8&quot;</dd></div>
+                  <div><dt>Medida</dt><dd>½&quot; a 8&quot;</dd></div>
+                  <div><dt>Disponibilidad</dt><dd>Bajo pedido</dd></div>
                 </dl>
                 <a href="index.html?linea=Tuber%C3%ADa%20inoxidable&amp;producto=Tubo%20inoxidable%20c%C3%A9dula#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Tubo inoxidable cédula">Solicitar cotización</a>
-              </div>
-            </article>
-            <!-- Producto 2 · Tubing para instrumentación -->
-            <article class="product-card" data-tipo="instrumentacion" data-material="inox316">
-              <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Tubing de acero inoxidable para instrumentación" width="640" height="400" loading="lazy">
-              </div>
-              <div class="product-card-body">
-                <span class="product-code">Instrumentación</span>
-                <h3 class="product-card-title">Tubing para instrumentación</h3>
-                <dl class="product-specs">
-                  <div><dt>Norma</dt><dd>ASTM A269</dd></div>
-                  <div><dt>Material</dt><dd>316</dd></div>
-                  <div><dt>Diámetro ext.</dt><dd>1/8&quot; a 1&quot;</dd></div>
-                </dl>
-                <a href="index.html?linea=Tuber%C3%ADa%20inoxidable&amp;producto=Tubing%20para%20instrumentaci%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Tubing para instrumentación">Solicitar cotización</a>
-              </div>
-            </article>
-            <!-- Producto 3 · Tubo sanitario pulido -->
-            <article class="product-card" data-tipo="sanitaria" data-material="inox304 inox316">
-              <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Tubo sanitario de acero inoxidable pulido" width="640" height="400" loading="lazy">
-              </div>
-              <div class="product-card-body">
-                <span class="product-code">Sanitaria</span>
-                <h3 class="product-card-title">Tubo sanitario pulido</h3>
-                <dl class="product-specs">
-                  <div><dt>Norma</dt><dd>ASTM A270</dd></div>
-                  <div><dt>Material</dt><dd>304 / 316L</dd></div>
-                  <div><dt>Medida</dt><dd>1&quot; a 4&quot;</dd></div>
-                </dl>
-                <a href="index.html?linea=Tuber%C3%ADa%20inoxidable&amp;producto=Tubo%20sanitario%20pulido#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Tubo sanitario pulido">Solicitar cotización</a>
               </div>
             </article>
 

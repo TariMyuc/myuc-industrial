@@ -102,7 +102,7 @@
 
         <p class="page-hero-code">Línea 04</p>
         <h1 id="pagina-titulo" class="page-hero-title">Componentes para gases criogénicos y medicinales</h1>
-        <p class="page-hero-lead">Válvulas, reguladores, conexiones CGA y refacciones para sistemas críticos. Asesoría técnica especializada.</p>
+        <p class="page-hero-lead">Reguladores, válvulas check y de alivio, válvulas de cilindro, conexiones CGA y refacciones para sistemas criogénicos, industriales y medicinales. Componentes de fabricantes reconocidos, con especificación verificada.</p>
       </div>
     </section>
 
@@ -126,8 +126,10 @@
               <p class="filter-title">Tipo de componente</p>
               <div class="filter-options">
                 <button type="button" class="filter-chip" data-valor="regulador" aria-pressed="false">Regulador</button>
-                <button type="button" class="filter-chip" data-valor="cga" aria-pressed="false">Conexión CGA</button>
+                <button type="button" class="filter-chip" data-valor="check" aria-pressed="false">Válvula check</button>
                 <button type="button" class="filter-chip" data-valor="alivio" aria-pressed="false">Válvula de alivio</button>
+                <button type="button" class="filter-chip" data-valor="cilindro" aria-pressed="false">Válvula de cilindro</button>
+                <button type="button" class="filter-chip" data-valor="cga" aria-pressed="false">Conexión CGA</button>
                 <button type="button" class="filter-chip" data-valor="refaccion" aria-pressed="false">Refacción</button>
               </div>
             </div>
@@ -138,6 +140,8 @@
                 <button type="button" class="filter-chip" data-valor="nitrogeno" aria-pressed="false">Nitrógeno</button>
                 <button type="button" class="filter-chip" data-valor="argon" aria-pressed="false">Argón</button>
                 <button type="button" class="filter-chip" data-valor="co2" aria-pressed="false">CO₂</button>
+                <button type="button" class="filter-chip" data-valor="n2o" aria-pressed="false">N₂O</button>
+                <button type="button" class="filter-chip" data-valor="hidrogeno" aria-pressed="false">Hidrógeno</button>
               </div>
             </div>
             <div class="filter-group" data-filtro="aplicacion">
@@ -148,6 +152,14 @@
                 <button type="button" class="filter-chip" data-valor="criogenica" aria-pressed="false">Criogénica</button>
               </div>
             </div>
+            <div class="filter-group" data-filtro="material">
+              <p class="filter-title">Material</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="laton" aria-pressed="false">Latón</button>
+                <button type="button" class="filter-chip" data-valor="inox" aria-pressed="false">Acero inoxidable</button>
+              </div>
+            </div>
+
 
             <button type="button" class="filters-clear" id="limpiar-filtros">Limpiar filtros</button>
           </details>
@@ -156,73 +168,212 @@
         <!-- ---------- Productos ---------- -->
         <div class="catalog-main">
           <div class="catalog-toolbar">
-            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 4 productos</p>
+            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 12 productos</p>
           </div>
 
-          <div class="product-grid product-grid-2" id="grid-productos">
+          <div class="product-grid" id="grid-productos">
 
-            <!-- Producto 1 · Regulador para oxígeno medicinal -->
-            <article class="product-card" data-tipo="regulador" data-gas="oxigeno" data-aplicacion="medicinal">
+            <!-- Regulador de presurización para tanque criogénico -->
+            <article class="product-card" data-tipo="regulador" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="criogenica industrial" data-material="laton">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Regulador para oxígeno medicinal" width="640" height="400" loading="lazy">
+                <img src="img/productos/regulador-presurizacion.jpg" alt="Regulador de presurización para tanque criogénico" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Regulador</span>
-                <h3 class="product-card-title">Regulador para oxígeno medicinal</h3>
+                <h3 class="product-card-title">Regulador de presurización para tanque criogénico</h3>
                 <dl class="product-specs">
-                  <div><dt>Entrada máx.</dt><dd>3,000 psi</dd></div>
-                  <div><dt>Flujo</dt><dd>0 – 15 L/min</dd></div>
-                  <div><dt>Conexión</dt><dd>CGA 540 / 870</dd></div>
+                  <div><dt>Conexión</dt><dd>½&quot; NPT</dd></div>
+                  <div><dt>Ajuste</dt><dd>15 a 600 psi</dd></div>
+                  <div><dt>Temperatura</dt><dd>-196 a 93 °C, limpio para O₂</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · Chart · RegO</dd></div>
                 </dl>
-                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Regulador%20para%20ox%C3%ADgeno%20medicinal#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Regulador para oxígeno medicinal">Solicitar cotización</a>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Regulador%20de%20presurizaci%C3%B3n%20para%20tanque%20criog%C3%A9nico#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Regulador de presurización para tanque criogénico">Solicitar cotización</a>
               </div>
             </article>
-            <!-- Producto 2 · Conexiones y tuercas CGA de alta presión -->
-            <article class="product-card" data-tipo="cga" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="medicinal industrial">
+            <!-- Regulador economizador / de contrapresión -->
+            <article class="product-card" data-tipo="regulador" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="criogenica" data-material="laton inox">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Conexiones y tuercas CGA de latón para alta presión" width="640" height="400" loading="lazy">
+                <img src="img/productos/regulador-economizador.jpg" alt="Regulador economizador de contrapresión" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Regulador</span>
+                <h3 class="product-card-title">Regulador economizador / de contrapresión</h3>
+                <dl class="product-specs">
+                  <div><dt>Conexión</dt><dd>¼&quot; NPT</dd></div>
+                  <div><dt>Ajuste</dt><dd>15 a 600 psi</dd></div>
+                  <div><dt>Material</dt><dd>Latón, internos inox 303</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · RegO</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Regulador%20economizador%20/%20de%20contrapresi%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Regulador economizador / de contrapresión">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Regulador de línea final para cilindro líquido -->
+            <article class="product-card" data-tipo="regulador" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="criogenica industrial" data-material="laton">
+              <div class="product-card-media">
+                <img src="img/productos/regulador-linea-final.jpg" alt="Regulador de línea final para cilindro de líquido criogénico" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Regulador</span>
+                <h3 class="product-card-title">Regulador de línea final para cilindro líquido</h3>
+                <dl class="product-specs">
+                  <div><dt>Conexión</dt><dd>¼&quot; NPT + puertos de manómetro</dd></div>
+                  <div><dt>Ajuste</dt><dd>15 a 525 psi</dd></div>
+                  <div><dt>Temperatura</dt><dd>-196 a 93 °C</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · RegO</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Regulador%20de%20l%C3%ADnea%20final%20para%20cilindro%20l%C3%ADquido#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Regulador de línea final para cilindro líquido">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Regulador de entrega para oxígeno y CO₂ -->
+            <article class="product-card" data-tipo="regulador" data-gas="oxigeno co2 nitrogeno argon" data-aplicacion="medicinal industrial" data-material="laton">
+              <div class="product-card-media">
+                <img src="img/productos/regulador-oxigeno-medicinal.jpg" alt="Regulador de entrega de gas para oxígeno y CO₂" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Regulador</span>
+                <h3 class="product-card-title">Regulador de entrega para oxígeno y CO₂</h3>
+                <dl class="product-specs">
+                  <div><dt>Conexión</dt><dd>¼&quot; a 1&quot; NPT</dd></div>
+                  <div><dt>Salida</dt><dd>0 a 450 psi</dd></div>
+                  <div><dt>Material</dt><dd>Latón, sellos EPDM para CO₂</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · Harris · Victor</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Regulador%20de%20entrega%20para%20ox%C3%ADgeno%20y%20CO%E2%82%82#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Regulador de entrega para oxígeno y CO₂">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Válvula check criogénica de alta presión -->
+            <article class="product-card" data-tipo="check" data-gas="oxigeno nitrogeno argon hidrogeno" data-aplicacion="criogenica industrial" data-material="laton">
+              <div class="product-card-media">
+                <img src="img/productos/valvula-check-criogenica.jpg" alt="Válvula check criogénica de alta presión" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Válvula check</span>
+                <h3 class="product-card-title">Válvula check criogénica de alta presión</h3>
+                <dl class="product-specs">
+                  <div><dt>Conexión</dt><dd>½&quot; y ¾&quot; NPT</dd></div>
+                  <div><dt>Presión máx.</dt><dd>7,000 psi</dd></div>
+                  <div><dt>Apertura</dt><dd>5 psi, latón CDA-360</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · RegO</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=V%C3%A1lvula%20check%20criog%C3%A9nica%20de%20alta%20presi%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvula check criogénica de alta presión">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Válvula de alivio criogénica de latón -->
+            <article class="product-card" data-tipo="alivio" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="criogenica industrial" data-material="laton">
+              <div class="product-card-media">
+                <img src="img/productos/valvula-alivio-laton.jpg" alt="Válvula de alivio criogénica de latón" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Válvula de alivio</span>
+                <h3 class="product-card-title">Válvula de alivio criogénica de latón</h3>
+                <dl class="product-specs">
+                  <div><dt>Entrada</dt><dd>¼&quot;, ⅜&quot; y ½&quot; NPT</dd></div>
+                  <div><dt>Ajuste</dt><dd>10 a 750 psi</dd></div>
+                  <div><dt>Temperatura</dt><dd>-196 °C</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · RegO · Chart</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=V%C3%A1lvula%20de%20alivio%20criog%C3%A9nica%20de%20lat%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvula de alivio criogénica de latón">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Válvula de alivio criogénica de acero inoxidable -->
+            <article class="product-card" data-tipo="alivio" data-gas="hidrogeno oxigeno nitrogeno argon" data-aplicacion="criogenica" data-material="inox">
+              <div class="product-card-media">
+                <img src="img/productos/valvula-alivio-inox.jpg" alt="Válvula de alivio criogénica de acero inoxidable" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Válvula de alivio</span>
+                <h3 class="product-card-title">Válvula de alivio criogénica de acero inoxidable</h3>
+                <dl class="product-specs">
+                  <div><dt>Entrada</dt><dd>¼&quot; y ½&quot; NPT o doble férula</dd></div>
+                  <div><dt>Ajuste</dt><dd>10 a 750 psi</dd></div>
+                  <div><dt>Temperatura</dt><dd>Hasta -254 °C</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=V%C3%A1lvula%20de%20alivio%20criog%C3%A9nica%20de%20acero%20inoxidable#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvula de alivio criogénica de acero inoxidable">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Válvula de alivio con certificación ASME -->
+            <article class="product-card" data-tipo="alivio" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="industrial criogenica" data-material="laton inox">
+              <div class="product-card-media">
+                <img src="img/productos/valvula-alivio-asme.jpg" alt="Válvula de alivio con sello ASME UV" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Válvula de alivio</span>
+                <h3 class="product-card-title">Válvula de alivio con certificación ASME</h3>
+                <dl class="product-specs">
+                  <div><dt>Entrada</dt><dd>¼&quot;, ⅜&quot; y ½&quot; NPT</dd></div>
+                  <div><dt>Ajuste</dt><dd>20 a 550 psi</dd></div>
+                  <div><dt>Material</dt><dd>Latón o inox 316</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · RegO</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=V%C3%A1lvula%20de%20alivio%20con%20certificaci%C3%B3n%20ASME#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvula de alivio con certificación ASME">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Válvula de presión para cilindro líquido DOT 4L -->
+            <article class="product-card" data-tipo="cilindro" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="criogenica medicinal" data-material="laton">
+              <div class="product-card-media">
+                <img src="img/productos/valvula-cilindro-liquido.jpg" alt="Válvula de presión para cilindro criogénico de líquido" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Válvula de cilindro</span>
+                <h3 class="product-card-title">Válvula de presión para cilindro líquido DOT 4L</h3>
+                <dl class="product-specs">
+                  <div><dt>Conexión</dt><dd>¼&quot; NPT</dd></div>
+                  <div><dt>Ajuste</dt><dd>22 a 500 psi</dd></div>
+                  <div><dt>Cilindros</dt><dd>DOT 4L</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant · Chart</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=V%C3%A1lvula%20de%20presi%C3%B3n%20para%20cilindro%20l%C3%ADquido%20DOT%204L#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvula de presión para cilindro líquido DOT 4L">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Conexión CGA antimanipulación -->
+            <article class="product-card" data-tipo="cga" data-gas="oxigeno nitrogeno argon co2 n2o" data-aplicacion="medicinal industrial" data-material="laton inox">
+              <div class="product-card-media">
+                <img src="img/productos/conexion-cga-antimanipulacion.jpg" alt="Conexión CGA antimanipulación para cilindro criogénico" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Conexión CGA</span>
+                <h3 class="product-card-title">Conexión CGA antimanipulación</h3>
+                <dl class="product-specs">
+                  <div><dt>CGA</dt><dd>540 · 580 · 320 · 326</dd></div>
+                  <div><dt>Presión máx.</dt><dd>3,000 psi</dd></div>
+                  <div><dt>Uso</dt><dd>Industrial y medicinal</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Generant</dd></div>
+                </dl>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Conexi%C3%B3n%20CGA%20antimanipulaci%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Conexión CGA antimanipulación">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Conexiones y tuercas CGA de alta presión -->
+            <article class="product-card" data-tipo="cga" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="medicinal industrial" data-material="laton">
+              <div class="product-card-media">
+                <img src="img/productos/conexiones-tuercas-cga.jpg" alt="Conexiones y tuercas CGA de latón para alta presión" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Conexión CGA</span>
                 <h3 class="product-card-title">Conexiones y tuercas CGA de alta presión</h3>
                 <dl class="product-specs">
-                  <div><dt>Estándar</dt><dd>CGA 320 · 540 · 580</dd></div>
+                  <div><dt>CGA</dt><dd>540 · 580 · 320 · 346</dd></div>
                   <div><dt>Presión</dt><dd>Hasta 3,000 psi</dd></div>
                   <div><dt>Material</dt><dd>Latón</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Varios fabricantes</dd></div>
                 </dl>
                 <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Conexiones%20y%20tuercas%20CGA%20de%20alta%20presi%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Conexiones y tuercas CGA de alta presión">Solicitar cotización</a>
               </div>
             </article>
-            <!-- Producto 3 · Válvula de alivio para tanque criogénico -->
-            <article class="product-card" data-tipo="alivio" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="criogenica">
+            <!-- Refacciones y kits de reparación -->
+            <article class="product-card" data-tipo="refaccion" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="medicinal industrial criogenica" data-material="laton inox">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Válvula de alivio para tanque criogénico" width="640" height="400" loading="lazy">
-              </div>
-              <div class="product-card-body">
-                <span class="product-code">Alivio</span>
-                <h3 class="product-card-title">Válvula de alivio para tanque criogénico</h3>
-                <dl class="product-specs">
-                  <div><dt>Ajuste</dt><dd>22 – 350 psi</dd></div>
-                  <div><dt>Temperatura</dt><dd>-196 °C</dd></div>
-                  <div><dt>Material</dt><dd>Latón / Bronce</dd></div>
-                </dl>
-                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=V%C3%A1lvula%20de%20alivio%20para%20tanque%20criog%C3%A9nico#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvula de alivio para tanque criogénico">Solicitar cotización</a>
-              </div>
-            </article>
-            <!-- Producto 4 · Refacciones para marcas especializadas -->
-            <article class="product-card" data-tipo="refaccion" data-gas="oxigeno nitrogeno argon co2" data-aplicacion="medicinal industrial criogenica">
-              <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Refacciones y componentes para reguladores y manifolds" width="640" height="400" loading="lazy">
+                <img src="img/productos/refacciones-criogenicas.jpg" alt="Refacciones y kits de reparación para reguladores y válvulas criogénicas" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Refacción</span>
-                <h3 class="product-card-title">Refacciones para marcas especializadas</h3>
+                <h3 class="product-card-title">Refacciones y kits de reparación</h3>
                 <dl class="product-specs">
-                  <div><dt>Marcas</dt><dd>Principales del sector</dd></div>
-                  <div><dt>Tipo</dt><dd>Kits, asientos, empaques</dd></div>
-                  <div><dt>Uso</dt><dd>Reguladores y manifolds</dd></div>
+                  <div><dt>Tipo</dt><dd>Kits de sello · Resortes · Diafragmas</dd></div>
+                  <div><dt>Uso</dt><dd>Reguladores, válvulas y manifolds</dd></div>
+                  <div><dt>Marcas disponibles</dt><dd>Según el equipo a reparar</dd></div>
                 </dl>
-                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Refacciones%20para%20marcas%20especializadas#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Refacciones para marcas especializadas">Solicitar cotización</a>
+                <a href="index.html?linea=Componentes%20para%20gases%20criog%C3%A9nicos&amp;producto=Refacciones%20y%20kits%20de%20reparaci%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Refacciones y kits de reparación">Solicitar cotización</a>
               </div>
             </article>
 

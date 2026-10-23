@@ -102,7 +102,7 @@
 
         <p class="page-hero-code">Línea 03</p>
         <h1 id="pagina-titulo" class="page-hero-title">Materia prima para tornería y maquinado</h1>
-        <p class="page-hero-lead">Barras de latón, bronce, cobre y acero inoxidable en perfiles redondos, hexagonales y cuadrados. Material de fácil maquinado para talleres de tornería, CNC y fabricación de piezas.</p>
+        <p class="page-hero-lead">Barras, soleras y placas de latón, bronce, cobre, acero inoxidable, aluminio, aceros al carbón y plásticos de ingeniería. Material de fácil maquinado para talleres de tornería, CNC y fabricación de piezas.</p>
       </div>
     </section>
 
@@ -129,6 +129,9 @@
                 <button type="button" class="filter-chip" data-valor="bronce" aria-pressed="false">Bronce</button>
                 <button type="button" class="filter-chip" data-valor="cobre" aria-pressed="false">Cobre</button>
                 <button type="button" class="filter-chip" data-valor="inox" aria-pressed="false">Acero inoxidable</button>
+                <button type="button" class="filter-chip" data-valor="aluminio" aria-pressed="false">Aluminio</button>
+                <button type="button" class="filter-chip" data-valor="acero" aria-pressed="false">Acero al carbón y herramienta</button>
+                <button type="button" class="filter-chip" data-valor="plastico" aria-pressed="false">Plástico de ingeniería</button>
               </div>
             </div>
             <div class="filter-group" data-filtro="perfil">
@@ -137,8 +140,12 @@
                 <button type="button" class="filter-chip" data-valor="redondo" aria-pressed="false">Redondo</button>
                 <button type="button" class="filter-chip" data-valor="hexagonal" aria-pressed="false">Hexagonal</button>
                 <button type="button" class="filter-chip" data-valor="cuadrado" aria-pressed="false">Cuadrado</button>
+                <button type="button" class="filter-chip" data-valor="solera" aria-pressed="false">Solera</button>
+                <button type="button" class="filter-chip" data-valor="placa" aria-pressed="false">Placa</button>
+                <button type="button" class="filter-chip" data-valor="buje" aria-pressed="false">Buje / tubo</button>
               </div>
             </div>
+
 
             <button type="button" class="filters-clear" id="limpiar-filtros">Limpiar filtros</button>
           </details>
@@ -147,73 +154,137 @@
         <!-- ---------- Productos ---------- -->
         <div class="catalog-main">
           <div class="catalog-toolbar">
-            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 4 productos</p>
+            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 8 productos</p>
           </div>
 
-          <div class="product-grid product-grid-2" id="grid-productos">
+          <div class="product-grid" id="grid-productos">
 
-            <!-- Producto 1 · Barra de latón hexagonal -->
-            <article class="product-card" data-material="laton" data-perfil="hexagonal">
-              <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Barra de latón hexagonal" width="640" height="400" loading="lazy">
-              </div>
-              <div class="product-card-body">
-                <span class="product-code">Latón</span>
-                <h3 class="product-card-title">Barra de latón hexagonal</h3>
-                <dl class="product-specs">
-                  <div><dt>Medida</dt><dd>1/4&quot; a 2&quot; entre caras</dd></div>
-                  <div><dt>Aleación</dt><dd>C36000</dd></div>
-                  <div><dt>Largo</dt><dd>3.66 m</dd></div>
-                </dl>
-                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20de%20lat%C3%B3n%20hexagonal#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra de latón hexagonal">Solicitar cotización</a>
-              </div>
-            </article>
-            <!-- Producto 2 · Barra de latón redonda -->
+            <!-- Barra de latón redonda -->
             <article class="product-card" data-material="laton" data-perfil="redondo">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Barra de latón redonda" width="640" height="400" loading="lazy">
+                <img src="img/productos/barra-laton-redonda.jpg" alt="Barras redondas de latón de distintos diámetros" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Latón</span>
                 <h3 class="product-card-title">Barra de latón redonda</h3>
                 <dl class="product-specs">
-                  <div><dt>Diámetro</dt><dd>1/8&quot; a 4&quot;</dd></div>
-                  <div><dt>Aleación</dt><dd>C36000</dd></div>
-                  <div><dt>Largo</dt><dd>3.66 m</dd></div>
+                  <div><dt>Aleación</dt><dd>C360 maquinado libre</dd></div>
+                  <div><dt>Medida</dt><dd>3/32&quot; a 4&quot;</dd></div>
+                  <div><dt>Tramo</dt><dd>3 m</dd></div>
                 </dl>
                 <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20de%20lat%C3%B3n%20redonda#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra de latón redonda">Solicitar cotización</a>
               </div>
             </article>
-            <!-- Producto 3 · Barra de bronce fosforado -->
-            <article class="product-card" data-material="bronce" data-perfil="redondo">
+            <!-- Barra de latón hexagonal y cuadrada -->
+            <article class="product-card" data-material="laton" data-perfil="hexagonal cuadrado solera">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Barra de bronce fosforado" width="640" height="400" loading="lazy">
+                <img src="img/productos/barra-laton-hexagonal.jpg" alt="Barras hexagonales de latón" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Latón</span>
+                <h3 class="product-card-title">Barra de latón hexagonal y cuadrada</h3>
+                <dl class="product-specs">
+                  <div><dt>Aleación</dt><dd>C360 maquinado libre</dd></div>
+                  <div><dt>Medida</dt><dd>⅛&quot; a 2&quot;</dd></div>
+                  <div><dt>Perfiles</dt><dd>Hexagonal · Cuadrado · Solera</dd></div>
+                </dl>
+                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20de%20lat%C3%B3n%20hexagonal%20y%20cuadrada#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra de latón hexagonal y cuadrada">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Barra y buje de bronce SAE 660 / SAE 64 -->
+            <article class="product-card" data-material="bronce" data-perfil="redondo buje placa">
+              <div class="product-card-media">
+                <img src="img/productos/barra-bronce-sae660.jpg" alt="Barra maciza y buje de bronce" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Bronce</span>
-                <h3 class="product-card-title">Barra de bronce fosforado</h3>
+                <h3 class="product-card-title">Barra y buje de bronce SAE 660 / SAE 64</h3>
                 <dl class="product-specs">
-                  <div><dt>Diámetro</dt><dd>1/4&quot; a 3&quot;</dd></div>
-                  <div><dt>Aleación</dt><dd>C54400</dd></div>
-                  <div><dt>Largo</dt><dd>3.66 m</dd></div>
+                  <div><dt>Aleaciones</dt><dd>SAE 660 · SAE 64 · SAE 40</dd></div>
+                  <div><dt>Medida</dt><dd>⅜&quot; a 3&quot;</dd></div>
+                  <div><dt>Formas</dt><dd>Barra · Buje · Placa</dd></div>
                 </dl>
-                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20de%20bronce%20fosforado#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra de bronce fosforado">Solicitar cotización</a>
+                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20y%20buje%20de%20bronce%20SAE%20660%20/%20SAE%2064#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra y buje de bronce SAE 660 / SAE 64">Solicitar cotización</a>
               </div>
             </article>
-            <!-- Producto 4 · Barra de acero inoxidable 303 -->
-            <article class="product-card" data-material="inox" data-perfil="redondo">
+            <!-- Barra de acero inoxidable 303 / 304 / 316 -->
+            <article class="product-card" data-material="inox" data-perfil="redondo hexagonal cuadrado">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Barra de acero inoxidable 303" width="640" height="400" loading="lazy">
+                <img src="img/productos/barra-inox-303.jpg" alt="Barras de acero inoxidable redondas y hexagonales" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Inoxidable</span>
-                <h3 class="product-card-title">Barra de acero inoxidable 303</h3>
+                <h3 class="product-card-title">Barra de acero inoxidable 303 / 304 / 316</h3>
                 <dl class="product-specs">
-                  <div><dt>Diámetro</dt><dd>1/4&quot; a 4&quot;</dd></div>
-                  <div><dt>Aleación</dt><dd>AISI 303</dd></div>
-                  <div><dt>Acabado</dt><dd>Estirado en frío</dd></div>
+                  <div><dt>Grados</dt><dd>303 · 304 · 316 · 416</dd></div>
+                  <div><dt>Redonda</dt><dd>¼&quot; a 6&quot;</dd></div>
+                  <div><dt>Hexagonal / cuadrada</dt><dd>¼&quot; a 2&quot;</dd></div>
                 </dl>
-                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20de%20acero%20inoxidable%20303#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra de acero inoxidable 303">Solicitar cotización</a>
+                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20de%20acero%20inoxidable%20303%20/%20304%20/%20316#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra de acero inoxidable 303 / 304 / 316">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Barra y solera de cobre -->
+            <article class="product-card" data-material="cobre" data-perfil="redondo cuadrado solera">
+              <div class="product-card-media">
+                <img src="img/productos/barra-cobre.jpg" alt="Barra redonda y solera de cobre" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Cobre</span>
+                <h3 class="product-card-title">Barra y solera de cobre</h3>
+                <dl class="product-specs">
+                  <div><dt>Aleaciones</dt><dd>1100 · 172 · 18150</dd></div>
+                  <div><dt>Redonda</dt><dd>3/16&quot; a 3&quot;</dd></div>
+                  <div><dt>Solera</dt><dd>⅛×⅜&quot; a ½×4&quot;</dd></div>
+                </dl>
+                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20y%20solera%20de%20cobre#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra y solera de cobre">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Barra y placa de aluminio 6061 / 7075 -->
+            <article class="product-card" data-material="aluminio" data-perfil="redondo placa solera">
+              <div class="product-card-media">
+                <img src="img/productos/barra-placa-aluminio.jpg" alt="Barra redonda y placa de aluminio" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Aluminio</span>
+                <h3 class="product-card-title">Barra y placa de aluminio 6061 / 7075</h3>
+                <dl class="product-specs">
+                  <div><dt>Aleaciones</dt><dd>6061 · 7075 · 6063</dd></div>
+                  <div><dt>Formas</dt><dd>Barra redonda · Placa · Solera</dd></div>
+                  <div><dt>Uso</dt><dd>Estructural y maquinado</dd></div>
+                </dl>
+                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Barra%20y%20placa%20de%20aluminio%206061%20/%207075#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Barra y placa de aluminio 6061 / 7075">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Acero al carbón y grado herramienta -->
+            <article class="product-card" data-material="acero" data-perfil="redondo placa cuadrado">
+              <div class="product-card-media">
+                <img src="img/productos/barra-acero-4140.jpg" alt="Barras de acero al carbón y grado herramienta" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Acero</span>
+                <h3 class="product-card-title">Acero al carbón y grado herramienta</h3>
+                <dl class="product-specs">
+                  <div><dt>Carbón y aleados</dt><dd>1018 · 1045 · 4140T</dd></div>
+                  <div><dt>Herramienta</dt><dd>D2 · O1 · H13 · P20</dd></div>
+                  <div><dt>Formas</dt><dd>Barra · Placa</dd></div>
+                </dl>
+                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Acero%20al%20carb%C3%B3n%20y%20grado%20herramienta#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Acero al carbón y grado herramienta">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Plásticos de ingeniería -->
+            <article class="product-card" data-material="plastico" data-perfil="redondo placa">
+              <div class="product-card-media">
+                <img src="img/productos/nylamid-acetal.jpg" alt="Barra y placa de Nylamid y acetal" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Plástico</span>
+                <h3 class="product-card-title">Plásticos de ingeniería</h3>
+                <dl class="product-specs">
+                  <div><dt>Materiales</dt><dd>Nylamid · Acetal · UHMW (TIVAR)</dd></div>
+                  <div><dt>Formas</dt><dd>Barra · Placa</dd></div>
+                  <div><dt>Uso</dt><dd>Bujes, guías, engranes</dd></div>
+                </dl>
+                <a href="index.html?linea=Barras%20y%20s%C3%B3lidos%20para%20torner%C3%ADa&amp;producto=Pl%C3%A1sticos%20de%20ingenier%C3%ADa#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Plásticos de ingeniería">Solicitar cotización</a>
               </div>
             </article>
 

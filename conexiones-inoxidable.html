@@ -102,7 +102,7 @@
 
         <p class="page-hero-code">Línea 02</p>
         <h1 id="pagina-titulo" class="page-hero-title">Conexiones de acero inoxidable</h1>
-        <p class="page-hero-lead">Codos, tees, reducciones y conexiones soldables, roscadas y de compresión en acero inoxidable, para armar líneas de proceso e instrumentación sin fugas.</p>
+        <p class="page-hero-lead">Conexiones clamp, soldables, roscadas y de compresión, más válvulas sanitarias, en acero inoxidable 304 y 316L para líneas sanitarias, de proceso e instrumentación.</p>
       </div>
     </section>
 
@@ -125,18 +125,29 @@
             <div class="filter-group" data-filtro="union">
               <p class="filter-title">Tipo de unión</p>
               <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="clamp" aria-pressed="false">Clamp</button>
                 <button type="button" class="filter-chip" data-valor="soldable" aria-pressed="false">Soldable</button>
                 <button type="button" class="filter-chip" data-valor="roscada" aria-pressed="false">Roscada NPT</button>
-                <button type="button" class="filter-chip" data-valor="compresion" aria-pressed="false">Compresión</button>
+                <button type="button" class="filter-chip" data-valor="compresion" aria-pressed="false">Compresión (doble férula)</button>
+                <button type="button" class="filter-chip" data-valor="valvula" aria-pressed="false">Válvula sanitaria</button>
               </div>
             </div>
             <div class="filter-group" data-filtro="material">
               <p class="filter-title">Material</p>
               <div class="filter-options">
                 <button type="button" class="filter-chip" data-valor="inox304" aria-pressed="false">Inoxidable 304</button>
-                <button type="button" class="filter-chip" data-valor="inox316" aria-pressed="false">Inoxidable 316</button>
+                <button type="button" class="filter-chip" data-valor="inox316" aria-pressed="false">Inoxidable 316L</button>
               </div>
             </div>
+            <div class="filter-group" data-filtro="uso">
+              <p class="filter-title">Uso</p>
+              <div class="filter-options">
+                <button type="button" class="filter-chip" data-valor="sanitario" aria-pressed="false">Sanitario</button>
+                <button type="button" class="filter-chip" data-valor="instrumentacion" aria-pressed="false">Instrumentación</button>
+                <button type="button" class="filter-chip" data-valor="proceso" aria-pressed="false">Proceso</button>
+              </div>
+            </div>
+
 
             <button type="button" class="filters-clear" id="limpiar-filtros">Limpiar filtros</button>
           </details>
@@ -145,57 +156,105 @@
         <!-- ---------- Productos ---------- -->
         <div class="catalog-main">
           <div class="catalog-toolbar">
-            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 3 productos</p>
+            <p class="catalog-count" id="conteo-productos" aria-live="polite">Mostrando 6 productos</p>
           </div>
 
           <div class="product-grid product-grid-2" id="grid-productos">
 
-            <!-- Producto 1 · Codo 90° soldable -->
-            <article class="product-card" data-union="soldable" data-material="inox304 inox316">
+            <!-- Conexiones clamp sanitarias -->
+            <article class="product-card" data-union="clamp" data-material="inox304 inox316" data-uso="sanitario">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Codo de 90 grados de acero inoxidable para soldar" width="640" height="400" loading="lazy">
+                <img src="img/productos/conexion-clamp.jpg" alt="Codos y ferrules clamp de acero inoxidable sanitario" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Clamp</span>
+                <h3 class="product-card-title">Conexiones clamp sanitarias</h3>
+                <dl class="product-specs">
+                  <div><dt>Norma</dt><dd>3A · DIN</dd></div>
+                  <div><dt>Material</dt><dd>304 / 316L</dd></div>
+                  <div><dt>Medida</dt><dd>½&quot; a 6&quot;</dd></div>
+                </dl>
+                <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=Conexiones%20clamp%20sanitarias#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Conexiones clamp sanitarias">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Codo soldable a tope 90° / 45° -->
+            <article class="product-card" data-union="soldable" data-material="inox304 inox316" data-uso="sanitario proceso">
+              <div class="product-card-media">
+                <img src="img/productos/codo-soldable.jpg" alt="Codo de acero inoxidable con extremos lisos para soldar" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Soldable</span>
-                <h3 class="product-card-title">Codo 90° soldable</h3>
+                <h3 class="product-card-title">Codo soldable a tope 90° / 45°</h3>
                 <dl class="product-specs">
-                  <div><dt>Norma</dt><dd>ASTM A403</dd></div>
-                  <div><dt>Material</dt><dd>304 / 316</dd></div>
-                  <div><dt>Medida</dt><dd>1/2&quot; a 8&quot;</dd></div>
+                  <div><dt>Norma</dt><dd>ASTM A270</dd></div>
+                  <div><dt>Material</dt><dd>304 / 316L</dd></div>
+                  <div><dt>Medida</dt><dd>½&quot; a 6&quot;</dd></div>
                 </dl>
-                <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=Codo%2090%C2%B0%20soldable#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Codo 90° soldable">Solicitar cotización</a>
+                <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=Codo%20soldable%20a%20tope%2090%C2%B0%20/%2045%C2%B0#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Codo soldable a tope 90° / 45°">Solicitar cotización</a>
               </div>
             </article>
-            <!-- Producto 2 · Conexión roscada NPT -->
-            <article class="product-card" data-union="roscada" data-material="inox316">
+            <!-- Tee, yee y reducción sanitaria -->
+            <article class="product-card" data-union="clamp soldable" data-material="inox304 inox316" data-uso="sanitario proceso">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Conexiones roscadas de acero inoxidable" width="640" height="400" loading="lazy">
+                <img src="img/productos/tee-reduccion-sanitaria.jpg" alt="Tee y reducción concéntrica de acero inoxidable sanitario" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Tee y reducción</span>
+                <h3 class="product-card-title">Tee, yee y reducción sanitaria</h3>
+                <dl class="product-specs">
+                  <div><dt>Unión</dt><dd>Clamp o soldable</dd></div>
+                  <div><dt>Material</dt><dd>304 / 316L</dd></div>
+                  <div><dt>Medida</dt><dd>½&quot; a 6&quot;</dd></div>
+                </dl>
+                <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=Tee%2C%20yee%20y%20reducci%C3%B3n%20sanitaria#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Tee, yee y reducción sanitaria">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Conexión roscada NPT -->
+            <article class="product-card" data-union="roscada" data-material="inox304 inox316" data-uso="proceso">
+              <div class="product-card-media">
+                <img src="img/productos/conexion-roscada.jpg" alt="Niples, coples y codos roscados de acero inoxidable" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Roscada</span>
                 <h3 class="product-card-title">Conexión roscada NPT</h3>
                 <dl class="product-specs">
-                  <div><dt>Clase</dt><dd>3000 lb</dd></div>
-                  <div><dt>Material</dt><dd>316</dd></div>
-                  <div><dt>Medida</dt><dd>1/8&quot; a 2&quot;</dd></div>
+                  <div><dt>Rosca</dt><dd>NPT</dd></div>
+                  <div><dt>Material</dt><dd>304 / 316</dd></div>
+                  <div><dt>Medida</dt><dd>¼&quot; a 2&quot;</dd></div>
                 </dl>
                 <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=Conexi%C3%B3n%20roscada%20NPT#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Conexión roscada NPT">Solicitar cotización</a>
               </div>
             </article>
-            <!-- Producto 3 · Conexión de compresión -->
-            <article class="product-card" data-union="compresion" data-material="inox316">
+            <!-- Conector de compresión doble férula -->
+            <article class="product-card" data-union="compresion" data-material="inox316" data-uso="instrumentacion">
               <div class="product-card-media">
-                <img src="img/placeholder.svg" alt="Conexión de compresión de doble férula para tubing" width="640" height="400" loading="lazy">
+                <img src="img/productos/conexion-compresion.jpg" alt="Conector de compresión de doble férula para tubing" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
               </div>
               <div class="product-card-body">
                 <span class="product-code">Compresión</span>
-                <h3 class="product-card-title">Conexión de compresión</h3>
+                <h3 class="product-card-title">Conector de compresión doble férula</h3>
                 <dl class="product-specs">
-                  <div><dt>Tipo</dt><dd>Doble férula</dd></div>
+                  <div><dt>Para tubing</dt><dd>⅛&quot; a 1&quot;</dd></div>
                   <div><dt>Material</dt><dd>316</dd></div>
-                  <div><dt>Tubing</dt><dd>1/8&quot; a 1&quot;</dd></div>
+                  <div><dt>Presión</dt><dd>Hasta 6,000 psi</dd></div>
                 </dl>
-                <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=Conexi%C3%B3n%20de%20compresi%C3%B3n#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Conexión de compresión">Solicitar cotización</a>
+                <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=Conector%20de%20compresi%C3%B3n%20doble%20f%C3%A9rula#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Conector de compresión doble férula">Solicitar cotización</a>
+              </div>
+            </article>
+            <!-- Válvulas sanitarias -->
+            <article class="product-card" data-union="valvula clamp" data-material="inox316" data-uso="sanitario">
+              <div class="product-card-media">
+                <img src="img/productos/valvula-sanitaria.jpg" alt="Válvula mariposa sanitaria de acero inoxidable con extremos clamp" width="640" height="400" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+              </div>
+              <div class="product-card-body">
+                <span class="product-code">Válvula</span>
+                <h3 class="product-card-title">Válvulas sanitarias</h3>
+                <dl class="product-specs">
+                  <div><dt>Tipos</dt><dd>Mariposa · Esfera · Check</dd></div>
+                  <div><dt>Material</dt><dd>316L</dd></div>
+                  <div><dt>Extremos</dt><dd>Clamp ½&quot; a 4&quot;</dd></div>
+                </dl>
+                <a href="index.html?linea=Conexiones%20inoxidable&amp;producto=V%C3%A1lvulas%20sanitarias#contacto" class="btn btn-primary product-card-btn" aria-label="Solicitar cotización: Válvulas sanitarias">Solicitar cotización</a>
               </div>
             </article>
 
