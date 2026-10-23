@@ -1,0 +1,631 @@
+{
+  "lineas": [
+    {
+      "id": "tuberia-inoxidable",
+      "codigo": "Línea 01",
+      "nombre": "Tubería inoxidable",
+      "pagina": "tuberia-inoxidable.html",
+      "descripcion": "Tubería cédula, sanitaria y para instrumentación, bajo norma ASTM."
+    },
+    {
+      "id": "conexiones-inoxidable",
+      "codigo": "Línea 02",
+      "nombre": "Conexiones inoxidable",
+      "pagina": "conexiones-inoxidable.html",
+      "descripcion": "Codos, tees, reducciones y conexiones roscadas, soldables y de compresión."
+    },
+    {
+      "id": "torneria",
+      "codigo": "Línea 03",
+      "nombre": "Barras y sólidos para tornería",
+      "pagina": "torneria.html",
+      "descripcion": "Suministro de barras de latón, bronce, cobre y acero inoxidable en perfiles redondos, hexagonales y cuadrados para maquinado."
+    },
+    {
+      "id": "gases-criogenicos",
+      "codigo": "Línea 04",
+      "nombre": "Componentes para gases criogénicos",
+      "pagina": "gases-criogenicos.html",
+      "descripcion": "Suministro de válvulas, reguladores, conexiones CGA, tuercas y refacciones para sistemas de gases criogénicos y medicinales."
+    },
+    {
+      "id": "fabricacion",
+      "codigo": "Línea 05",
+      "nombre": "Fabricación especializada",
+      "pagina": "fabricacion.html",
+      "descripcion": "Diseño y fabricación de racks, manifolds y soldadura de piezas especiales en acero inoxidable y latón."
+    }
+  ],
+  "productos": [
+    {
+      "id": "tubo-cedula",
+      "nombre": "Tubo inoxidable cédula",
+      "categoria": "Cédula",
+      "linea": "tuberia-inoxidable",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Tubo para conducción de fluidos y gases en líneas de proceso, disponible en cédulas 10, 40 y 80.",
+      "especificaciones": [
+        {
+          "nombre": "Norma",
+          "valor": "ASTM A312"
+        },
+        {
+          "nombre": "Material",
+          "valor": "304 / 316L"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "1/2\" a 8\""
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "cedula"
+        ],
+        "material": [
+          "inox304",
+          "inox316"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "tubing-instrumentacion",
+      "nombre": "Tubing para instrumentación",
+      "categoria": "Instrumentación",
+      "linea": "tuberia-inoxidable",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Tubo sin costura de diámetro pequeño para líneas de instrumentación, muestreo y gases a alta presión.",
+      "especificaciones": [
+        {
+          "nombre": "Norma",
+          "valor": "ASTM A269"
+        },
+        {
+          "nombre": "Material",
+          "valor": "316"
+        },
+        {
+          "nombre": "Diámetro ext.",
+          "valor": "1/8\" a 1\""
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "instrumentacion"
+        ],
+        "material": [
+          "inox316"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "tubo-sanitario",
+      "nombre": "Tubo sanitario pulido",
+      "categoria": "Sanitaria",
+      "linea": "tuberia-inoxidable",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Tubo con acabado pulido para industria alimentaria, farmacéutica y de bebidas.",
+      "especificaciones": [
+        {
+          "nombre": "Norma",
+          "valor": "ASTM A270"
+        },
+        {
+          "nombre": "Material",
+          "valor": "304 / 316L"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "1\" a 4\""
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "sanitaria"
+        ],
+        "material": [
+          "inox304",
+          "inox316"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "codo-soldable",
+      "nombre": "Codo 90° soldable",
+      "categoria": "Soldable",
+      "linea": "conexiones-inoxidable",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Codo de radio largo para soldar a tope en tubería cédula.",
+      "especificaciones": [
+        {
+          "nombre": "Norma",
+          "valor": "ASTM A403"
+        },
+        {
+          "nombre": "Material",
+          "valor": "304 / 316"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "1/2\" a 8\""
+        }
+      ],
+      "filtros": {
+        "union": [
+          "soldable"
+        ],
+        "material": [
+          "inox304",
+          "inox316"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "conexion-roscada",
+      "nombre": "Conexión roscada NPT",
+      "categoria": "Roscada",
+      "linea": "conexiones-inoxidable",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Tees, codos, coples y tapones roscados para líneas de alta presión.",
+      "especificaciones": [
+        {
+          "nombre": "Clase",
+          "valor": "3000 lb"
+        },
+        {
+          "nombre": "Material",
+          "valor": "316"
+        },
+        {
+          "nombre": "Medida",
+          "valor": "1/8\" a 2\""
+        }
+      ],
+      "filtros": {
+        "union": [
+          "roscada"
+        ],
+        "material": [
+          "inox316"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "conexion-compresion",
+      "nombre": "Conexión de compresión",
+      "categoria": "Compresión",
+      "linea": "conexiones-inoxidable",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Conexión de doble férula para tubing de instrumentación, sin soldadura.",
+      "especificaciones": [
+        {
+          "nombre": "Tipo",
+          "valor": "Doble férula"
+        },
+        {
+          "nombre": "Material",
+          "valor": "316"
+        },
+        {
+          "nombre": "Tubing",
+          "valor": "1/8\" a 1\""
+        }
+      ],
+      "filtros": {
+        "union": [
+          "compresion"
+        ],
+        "material": [
+          "inox316"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "barra-laton-hexagonal",
+      "nombre": "Barra de latón hexagonal",
+      "categoria": "Latón",
+      "linea": "torneria",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Latón de corte libre en perfil hexagonal, ideal para tuercas, conectores y piezas de torno automático.",
+      "especificaciones": [
+        {
+          "nombre": "Medida",
+          "valor": "1/4\" a 2\" entre caras"
+        },
+        {
+          "nombre": "Aleación",
+          "valor": "C36000"
+        },
+        {
+          "nombre": "Largo",
+          "valor": "3.66 m"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "laton"
+        ],
+        "perfil": [
+          "hexagonal"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "barra-laton-redonda",
+      "nombre": "Barra de latón redonda",
+      "categoria": "Latón",
+      "linea": "torneria",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Barra redonda de latón de fácil maquinado para bujes, pernos y piezas torneadas.",
+      "especificaciones": [
+        {
+          "nombre": "Diámetro",
+          "valor": "1/8\" a 4\""
+        },
+        {
+          "nombre": "Aleación",
+          "valor": "C36000"
+        },
+        {
+          "nombre": "Largo",
+          "valor": "3.66 m"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "laton"
+        ],
+        "perfil": [
+          "redondo"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "barra-bronce-fosforado",
+      "nombre": "Barra de bronce fosforado",
+      "categoria": "Bronce",
+      "linea": "torneria",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Bronce con buena resistencia al desgaste para bujes, cojinetes y piezas sometidas a fricción.",
+      "especificaciones": [
+        {
+          "nombre": "Diámetro",
+          "valor": "1/4\" a 3\""
+        },
+        {
+          "nombre": "Aleación",
+          "valor": "C54400"
+        },
+        {
+          "nombre": "Largo",
+          "valor": "3.66 m"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "bronce"
+        ],
+        "perfil": [
+          "redondo"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "barra-inox-303",
+      "nombre": "Barra de acero inoxidable 303",
+      "categoria": "Inoxidable",
+      "linea": "torneria",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Inoxidable de maquinado libre para piezas resistentes a la corrosión en torno y CNC.",
+      "especificaciones": [
+        {
+          "nombre": "Diámetro",
+          "valor": "1/4\" a 4\""
+        },
+        {
+          "nombre": "Aleación",
+          "valor": "AISI 303"
+        },
+        {
+          "nombre": "Acabado",
+          "valor": "Estirado en frío"
+        }
+      ],
+      "filtros": {
+        "material": [
+          "inox"
+        ],
+        "perfil": [
+          "redondo"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "regulador-oxigeno-medicinal",
+      "nombre": "Regulador para oxígeno medicinal",
+      "categoria": "Regulador",
+      "linea": "gases-criogenicos",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Regulador con flujómetro para cilindros de oxígeno de uso medicinal.",
+      "especificaciones": [
+        {
+          "nombre": "Entrada máx.",
+          "valor": "3,000 psi"
+        },
+        {
+          "nombre": "Flujo",
+          "valor": "0 – 15 L/min"
+        },
+        {
+          "nombre": "Conexión",
+          "valor": "CGA 540 / 870"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "regulador"
+        ],
+        "gas": [
+          "oxigeno"
+        ],
+        "aplicacion": [
+          "medicinal"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "conexiones-tuercas-cga",
+      "nombre": "Conexiones y tuercas CGA de alta presión",
+      "categoria": "Conexión CGA",
+      "linea": "gases-criogenicos",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Tuercas, niples y adaptadores CGA para conexiones de alta presión entre cilindros, reguladores y manifolds.",
+      "especificaciones": [
+        {
+          "nombre": "Estándar",
+          "valor": "CGA 320 · 540 · 580"
+        },
+        {
+          "nombre": "Presión",
+          "valor": "Hasta 3,000 psi"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Latón"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "cga"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "medicinal",
+          "industrial"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "valvula-alivio-tanque-criogenico",
+      "nombre": "Válvula de alivio para tanque criogénico",
+      "categoria": "Alivio",
+      "linea": "gases-criogenicos",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Protege termos y tanques de líquidos criogénicos liberando el exceso de presión.",
+      "especificaciones": [
+        {
+          "nombre": "Ajuste",
+          "valor": "22 – 350 psi"
+        },
+        {
+          "nombre": "Temperatura",
+          "valor": "-196 °C"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Latón / Bronce"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "alivio"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "criogenica"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "refacciones-marcas-especializadas",
+      "nombre": "Refacciones para marcas especializadas",
+      "categoria": "Refacción",
+      "linea": "gases-criogenicos",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Kits de reparación, asientos, empaques y componentes para equipos de las principales marcas especializadas en gases.",
+      "especificaciones": [
+        {
+          "nombre": "Marcas",
+          "valor": "Principales del sector"
+        },
+        {
+          "nombre": "Tipo",
+          "valor": "Kits, asientos, empaques"
+        },
+        {
+          "nombre": "Uso",
+          "valor": "Reguladores y manifolds"
+        }
+      ],
+      "filtros": {
+        "tipo": [
+          "refaccion"
+        ],
+        "gas": [
+          "oxigeno",
+          "nitrogeno",
+          "argon",
+          "co2"
+        ],
+        "aplicacion": [
+          "medicinal",
+          "industrial",
+          "criogenica"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "rack-cilindros",
+      "nombre": "Racks para cilindros de gas",
+      "categoria": "Racks",
+      "linea": "fabricacion",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Racks de piso o pared para almacenar y asegurar cilindros de gas de forma ordenada.",
+      "especificaciones": [
+        {
+          "nombre": "Capacidad",
+          "valor": "2 a 12 cilindros"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Inox o acero al carbón"
+        },
+        {
+          "nombre": "Montaje",
+          "valor": "Piso o pared"
+        }
+      ],
+      "filtros": {
+        "servicio": [
+          "racks"
+        ],
+        "material": [
+          "inox",
+          "acero"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "manifold-gases",
+      "nombre": "Manifolds para distribución de gases",
+      "categoria": "Manifolds",
+      "linea": "fabricacion",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Cabezales para conectar varios cilindros a una sola línea de suministro.",
+      "especificaciones": [
+        {
+          "nombre": "Cilindros",
+          "valor": "2 a 10 por lado"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Latón / Inox 316"
+        },
+        {
+          "nombre": "Presión",
+          "valor": "Hasta 3,000 psi"
+        }
+      ],
+      "filtros": {
+        "servicio": [
+          "manifolds"
+        ],
+        "material": [
+          "laton",
+          "inox"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "soldadura-piezas-especiales",
+      "nombre": "Soldadura de piezas especiales",
+      "categoria": "Soldadura",
+      "linea": "fabricacion",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Soldadura y reparación de piezas especiales en acero inoxidable y latón.",
+      "especificaciones": [
+        {
+          "nombre": "Proceso",
+          "valor": "TIG"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Inox · Latón"
+        },
+        {
+          "nombre": "Volumen",
+          "valor": "Pieza única o serie"
+        }
+      ],
+      "filtros": {
+        "servicio": [
+          "soldadura"
+        ],
+        "material": [
+          "inox",
+          "laton"
+        ]
+      },
+      "activo": true
+    },
+    {
+      "id": "diseno-sistemas-medida",
+      "nombre": "Diseño de sistemas a medida",
+      "categoria": "Diseño",
+      "linea": "fabricacion",
+      "imagen": "img/placeholder.svg",
+      "descripcion": "Diseñamos el sistema según tu proceso y lo fabricamos con los componentes de nuestro catálogo.",
+      "especificaciones": [
+        {
+          "nombre": "Partimos de",
+          "valor": "Tu plano o muestra"
+        },
+        {
+          "nombre": "Entregamos",
+          "valor": "Propuesta y plano"
+        },
+        {
+          "nombre": "Alcance",
+          "valor": "Diseño y fabricación"
+        }
+      ],
+      "filtros": {
+        "servicio": [
+          "diseno"
+        ],
+        "material": [
+          "inox",
+          "laton",
+          "acero"
+        ]
+      },
+      "activo": true
+    }
+  ]
+}

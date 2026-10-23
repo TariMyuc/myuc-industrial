@@ -1,0 +1,1489 @@
+/* ==================================================================
+   MYUC INDUSTRIAL · Estilos globales
+   Un solo archivo para todo el sitio. Las páginas nuevas (Válvulas,
+   Contacto, etc.) reutilizan estas mismas clases.
+
+   Las fuentes se cargan desde Google Fonts en el <head> de cada página:
+   Montserrat (títulos), Inter (texto), IBM Plex Mono (datos técnicos).
+
+   Índice
+   1. Variables de marca (colores, fuentes, medidas)
+   2. Base y reinicio
+   3. Utilidades (contenedor, textos, accesibilidad)
+   4. Botones
+   5. Header fijo (oscuro) y menú
+   6. Hero (oscuro)
+   7. Franja de sellos de confianza
+   8. Secciones genéricas
+   9. Tarjetas de producto
+   10. Beneficios (¿Por qué elegir…?)
+   11. Franja de cotización
+   11b. Formulario de cotización
+   12. Footer
+   13. Responsivo (tableta y celular)
+   14. Páginas de categoría (tuberia-inoxidable.html y siguientes)
+   15. Aviso de privacidad (texto legal)
+   ================================================================== */
+
+
+/* ------------------------------------------------------------------
+   1. VARIABLES DE MARCA (colores exactos del manual de identidad)
+   Cambiar un color aquí lo cambia en todo el sitio.
+   ------------------------------------------------------------------ */
+:root {
+  /* Colores principales */
+  --cobre: #B87333;          /* Cobre Metálico: detalles, líneas, acentos */
+  --gris-acero: #5F6B73;     /* Gris Acero: texto secundario */
+  --blanco: #FFFFFF;         /* Blanco */
+  --negro-carbon: #1C1F22;   /* Negro Carbón: header, hero y footer */
+  --azul: #0B6FB8;           /* Azul Criogénico: botones y enlaces */
+
+  /* Colores de apoyo */
+  --cobre-oscuro: #8A5626;   /* Cobre Oscuro: cobre legible sobre fondo claro */
+  --cobre-claro: #D08A4A;    /* Cobre Claro: cobre legible en texto pequeño sobre fondo oscuro */
+  --gris-niebla: #F2F3F4;    /* Gris Niebla: fondos de sección alternos */
+  --gris-linea: #D5D9DC;     /* Gris Línea: bordes y divisores */
+  --rojo-alerta: #C62828;    /* Rojo Alerta: errores de formulario (futuro) */
+
+  /* Derivados para la parte oscura (no son colores nuevos de marca,
+     son variaciones del Negro Carbón y del Azul para estados y capas) */
+  --carbon-2: #262A2E;       /* Gris muy oscuro: franja de sellos */
+  --linea-oscura: rgba(255, 255, 255, .12); /* Divisores sobre fondo oscuro */
+  --gris-claro: #C9CED2;     /* Texto secundario sobre fondo oscuro */
+  --azul-hover: #095C99;     /* Azul un poco más oscuro para hover */
+
+  /* Tipografías */
+  --font-titulos: "Montserrat", "Segoe UI", Arial, sans-serif;
+  --font-texto: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+
+  /* Medidas */
+  --radio: 2px;              /* Esquinas casi rectas (estilo industrial) */
+  --alto-boton: 44px;        /* Alto mínimo de botón (táctil), según manual */
+  --alto-header: 76px;
+  --ancho-max: 1200px;
+  --sombra: 0 1px 2px rgba(28, 31, 34, .06), 0 4px 16px rgba(28, 31, 34, .06);
+  --sombra-hover: 0 2px 4px rgba(28, 31, 34, .08), 0 12px 28px rgba(28, 31, 34, .12);
+}
+
+
+/* ------------------------------------------------------------------
+   2. BASE Y REINICIO
+   ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Desplazamiento suave al usar los enlaces del menú (#productos, etc.)
+     y espacio para que el header fijo no tape los títulos */
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--alto-header);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--negro-carbon);
+  background: var(--blanco);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titulos);
+  line-height: 1.2;
+  margin: 0 0 .5em;
+  color: inherit;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--azul);
+}
+
+ul,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Contorno visible al navegar con teclado */
+:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 2px;
+}
+
+/* Respeta a quien prefiere menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+
+/* ------------------------------------------------------------------
+   3. UTILIDADES
+   ------------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Texto en IBM Plex Mono para normas, códigos y medidas */
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.text-copper {
+  color: var(--cobre);
+}
+
+/* Etiqueta pequeña sobre los títulos de sección */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cobre-oscuro);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+/* Línea de cobre antes de la etiqueta (detalle de marca) */
+.eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: var(--cobre);
+}
+
+/* Sobre fondo claro se usa el cobre oscuro para que se lea bien */
+.eyebrow-dark {
+  color: var(--cobre-oscuro);
+  justify-content: center;
+}
+
+/* Enlace para saltar al contenido (aparece solo con teclado) */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 200;
+  background: var(--azul);
+  color: var(--blanco);
+  padding: 10px 16px;
+  border-radius: var(--radio);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+
+/* ------------------------------------------------------------------
+   4. BOTONES
+   Uso: <a class="btn btn-primary">…</a>
+   Rectangulares, esquinas casi rectas, alto mínimo 44px.
+   ------------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: var(--alto-boton);
+  padding: 0 22px;
+  border: 2px solid transparent;
+  border-radius: var(--radio);
+  font-family: var(--font-titulos);
+  font-weight: 700;
+  font-size: .875rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s, transform .2s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Botón principal: Azul Criogénico con texto blanco */
+.btn-primary {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background: var(--azul-hover);
+  border-color: var(--azul-hover);
+}
+
+/* Botón secundario para fondos oscuros: transparente con borde blanco */
+.btn-outline-light {
+  background: transparent;
+  border-color: var(--blanco);
+  color: var(--blanco);
+}
+
+.btn-outline-light:hover {
+  background: var(--blanco);
+  color: var(--negro-carbon);
+}
+
+/* Botón grande (hero y franja de cotización) */
+.btn-lg {
+  min-height: 54px;
+  padding: 0 32px;
+  font-size: .9375rem;
+}
+
+
+/* ------------------------------------------------------------------
+   5. HEADER FIJO (fondo Negro Carbón)
+   Logo negativo a la izquierda; menú y "Cotizar" a la derecha.
+   ------------------------------------------------------------------ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--alto-header);
+  background: var(--negro-carbon);
+  border-bottom: 1px solid var(--linea-oscura);
+  transition: box-shadow .2s;
+}
+
+/* Sombra que agrega js/main.js al bajar en la página */
+.site-header.is-scrolled {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand img {
+  height: 52px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  font-family: var(--font-titulos);
+  font-weight: 600;
+  font-size: .8125rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--blanco);
+}
+
+/* Subrayado de cobre en hover y en la página activa */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--cobre);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+/* Botón hamburguesa (oculto en escritorio) */
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: 1px solid var(--linea-oscura);
+  border-radius: var(--radio);
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  height: 2px;
+  background: var(--blanco);
+  transition: transform .2s, opacity .2s;
+}
+
+/* Las 3 rayas se convierten en una X cuando el menú está abierto */
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+/* ------------------------------------------------------------------
+   6. HERO (fondo Negro Carbón, texto blanco y gris claro)
+   ------------------------------------------------------------------ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--alto-header);  /* Compensa el header fijo */
+  padding: 128px 0 120px;
+  color: var(--blanco);
+  background-color: var(--negro-carbon);
+  /* Fondo: viñeta oscura + cuadrícula técnica muy tenue (tipo plano de ingeniería).
+     PARA USAR UNA FOTO: agregar al final de la lista
+     url("../img/hero.jpg") center / cover
+     y dejar la primera capa (degradado) para que el texto se siga leyendo. */
+  background-image:
+    linear-gradient(90deg, rgba(28, 31, 34, 1) 30%, rgba(28, 31, 34, .6) 100%),
+    linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+}
+
+/* Detalle técnico: bloque diagonal de líneas a la derecha (solo escritorio) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 38%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(184, 115, 51, .07) 0 1px,
+    transparent 1px 18px
+  );
+  border-left: 1px solid rgba(184, 115, 51, .25);
+  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;  /* Queda por encima del detalle diagonal */
+}
+
+/* Título principal: Montserrat Bold, blanco, grande */
+.hero-title {
+  max-width: 17ch;
+  margin-bottom: 36px;
+  font-family: var(--font-titulos);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 4.5vw + .5rem, 4.25rem);
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  color: var(--blanco);
+}
+
+/* Línea de cobre de 3px justo debajo del título */
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 3px;
+  margin-top: 32px;
+  background: var(--cobre);
+}
+
+/* Subtítulo en gris claro */
+.hero-lead {
+  max-width: 58ch;
+  margin-bottom: 44px;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--gris-claro);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+
+/* ------------------------------------------------------------------
+   7. FRANJA DE SELLOS DE CONFIANZA (gris oscuro, texto blanco)
+   ------------------------------------------------------------------ */
+.trust-bar {
+  background: var(--carbon-2);
+  border-top: 3px solid var(--cobre);
+  color: var(--blanco);
+}
+
+.trust-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 24px;
+  font-family: var(--font-titulos);
+  font-size: .875rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* Divisor vertical entre sellos */
+.trust-item + .trust-item {
+  border-left: 1px solid var(--linea-oscura);
+}
+
+/* Ícono en cobre */
+.trust-icon {
+  flex-shrink: 0;
+  color: var(--cobre);
+}
+
+.trust-item .mono {
+  color: var(--cobre-claro);
+  letter-spacing: .04em;
+}
+
+
+/* ------------------------------------------------------------------
+   8. SECCIONES GENÉRICAS
+   ------------------------------------------------------------------ */
+.section {
+  padding: 96px 0;
+}
+
+/* Sección con fondo Gris Niebla */
+.section-alt {
+  background: var(--gris-niebla);
+}
+
+.section-header {
+  max-width: 680px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 2.5vw + .75rem, 2.5rem);
+  font-weight: 700;
+}
+
+.section-lead {
+  color: var(--gris-acero);
+  font-size: 1.0625rem;
+  margin: 0;
+}
+
+
+/* ------------------------------------------------------------------
+   9. TARJETAS DE PRODUCTO
+   Fondo blanco, borde Gris Línea, título Montserrat SemiBold,
+   datos técnicos en IBM Plex Mono.
+   3 columnas en escritorio, 2 en tableta, 1 en celular.
+   ------------------------------------------------------------------ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--blanco);
+  border: 1px solid var(--gris-linea);
+  border-radius: var(--radio);
+  overflow: hidden;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+
+.product-card:hover {
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-3px);
+  border-color: var(--cobre);
+}
+
+/* Imagen con proporción fija 16:10 para que todas midan igual */
+.product-card-media {
+  aspect-ratio: 16 / 10;
+  background: var(--gris-niebla);
+  border-bottom: 3px solid var(--cobre);
+}
+
+.product-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+/* Código de línea en IBM Plex Mono */
+.product-code {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--cobre-oscuro);
+  margin-bottom: 8px;
+}
+
+/* Título de tarjeta: Montserrat SemiBold */
+.product-card-title {
+  font-family: var(--font-titulos);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Descripción corta de la tarjeta */
+.product-card-text {
+  margin-bottom: 16px;
+  font-size: .9375rem;
+  color: var(--gris-acero);
+}
+
+/* Ficha de datos técnicos (IBM Plex Mono) */
+.product-specs {
+  margin-bottom: 24px;
+  border-top: 1px solid var(--gris-linea);
+  font-family: var(--font-mono);
+  font-size: .8125rem;
+}
+
+.product-specs > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gris-linea);
+}
+
+.product-specs dt {
+  color: var(--gris-acero);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.product-specs dd {
+  color: var(--negro-carbon);
+  font-weight: 500;
+  text-align: right;
+}
+
+/* El botón se queda pegado abajo aunque el contenido mida distinto */
+.product-card-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+
+/* ------------------------------------------------------------------
+   10. BENEFICIOS (¿Por qué elegir MYUC INDUSTRIAL?)
+   ------------------------------------------------------------------ */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.feature {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  border-top: 3px solid var(--cobre);
+  padding: 36px 32px;
+  box-shadow: var(--sombra);
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  border-radius: var(--radio);
+  background: rgba(11, 111, 184, .08);
+  color: var(--azul);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.feature-text {
+  color: var(--gris-acero);
+  margin: 0;
+}
+
+
+/* ------------------------------------------------------------------
+   11. FRANJA DE COTIZACIÓN
+   ------------------------------------------------------------------ */
+.cta-band {
+  padding: 64px 0;
+  background: var(--blanco);
+  border-top: 1px solid var(--gris-linea);
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.cta-title {
+  font-size: clamp(1.5rem, 2vw + .5rem, 2rem);
+  font-weight: 700;
+}
+
+.cta-text {
+  color: var(--gris-acero);
+  margin: 0;
+  max-width: 56ch;
+}
+
+.cta-inner .btn {
+  flex-shrink: 0;
+}
+
+
+/* ------------------------------------------------------------------
+   11b. FORMULARIO DE COTIZACIÓN
+   Tarjeta blanca, bordes Gris Línea, etiquetas técnicas y botón azul.
+   ------------------------------------------------------------------ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Línea divisoria con la sección anterior (ambas usan Gris Niebla) */
+.contact-section {
+  border-top: 1px solid var(--gris-linea);
+}
+
+.contact-intro .eyebrow {
+  color: var(--cobre-oscuro);
+}
+
+.contact-intro .section-lead {
+  margin-bottom: 32px;
+}
+
+/* Pasos del proceso de cotización */
+.contact-steps li {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--gris-linea);
+  color: var(--negro-carbon);
+}
+
+.contact-steps li:last-child {
+  border-bottom: 1px solid var(--gris-linea);
+}
+
+.contact-steps .mono {
+  color: var(--cobre-oscuro);
+}
+
+/* Tarjeta del formulario */
+.quote-form {
+  background: var(--blanco);
+  border: 1px solid var(--gris-linea);
+  border-top: 3px solid var(--cobre);
+  border-radius: var(--radio);
+  padding: 36px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Campo que ocupa las dos columnas (Mensaje) */
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+/* Etiquetas en IBM Plex Mono, estilo ficha técnica */
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gris-acero);
+}
+
+.req {
+  color: var(--cobre-oscuro);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: var(--alto-boton);
+  padding: 10px 14px;
+  font-family: var(--font-texto);
+  font-size: 1rem;
+  color: var(--negro-carbon);
+  background: var(--blanco);
+  border: 1px solid var(--gris-linea);
+  border-radius: var(--radio);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #9AA3A9;
+}
+
+/* Flecha propia del menú desplegable */
+.form-field select {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235F6B73' stroke-width='1.8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+/* Campo activo: borde azul */
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(11, 111, 184, .15);
+}
+
+/* Campo con error (después de que la persona escribió algo) */
+.form-field input:user-invalid,
+.form-field select:user-invalid,
+.form-field textarea:user-invalid {
+  border-color: var(--rojo-alerta);
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gris-linea);
+}
+
+.form-footer .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Honeypot anti-spam del formulario: fuera de pantalla, nunca visible */
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-note {
+  margin: 0;
+  font-size: .8125rem;
+  color: var(--gris-acero);
+}
+
+
+/* ------------------------------------------------------------------
+   12. FOOTER (Negro Carbón)
+   ------------------------------------------------------------------ */
+.site-footer {
+  background: var(--negro-carbon);
+  color: var(--gris-claro);
+  font-size: .9375rem;
+  border-top: 3px solid var(--cobre);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.4fr 1fr;
+  gap: 48px;
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+
+.footer-brand img {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  max-width: 32ch;
+}
+
+.footer-title {
+  font-family: var(--font-titulos);
+  line-height: 1.2;
+  margin: 0 0 20px;
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blanco);
+}
+
+.footer-list li + li {
+  margin-top: 14px;
+}
+
+/* Etiqueta pequeña (Correo, Teléfono, Dirección) */
+.footer-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--cobre-claro);
+}
+
+.site-footer a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--cobre-claro);
+}
+
+.footer-links a {
+  color: var(--gris-claro);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--linea-oscura);
+  font-size: .8125rem;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  text-decoration: underline;
+}
+
+/* Enlaces legales (aviso y términos) uno junto al otro */
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+
+/* ------------------------------------------------------------------
+   13. RESPONSIVO
+   ------------------------------------------------------------------ */
+
+/* Tableta: 2 columnas de productos, beneficios en 1 columna */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  /* Formulario: texto arriba, formulario abajo */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* El detalle diagonal del Hero se oculta para no competir con el texto */
+  .hero::before {
+    display: none;
+  }
+}
+
+/* Tableta chica y celular: menú hamburguesa */
+@media (max-width: 860px) {
+  :root {
+    --alto-header: 68px;
+  }
+
+  .brand img {
+    height: 44px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* El menú se vuelve un panel oscuro desplegable bajo el header */
+  .main-nav {
+    position: fixed;
+    top: var(--alto-header);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 8px 16px 24px;
+    background: var(--negro-carbon);
+    border-bottom: 1px solid var(--linea-oscura);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .35);
+    /* Oculto por defecto; js/main.js agrega .is-open */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity .2s, transform .2s, visibility .2s;
+  }
+
+  .main-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--linea-oscura);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link.is-active {
+    color: var(--cobre-claro);
+  }
+
+  .nav-cta {
+    width: 100%;
+  }
+
+  /* Sellos en una columna */
+  .trust-list {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-item {
+    padding: 18px 0;
+  }
+
+  .trust-item + .trust-item {
+    border-left: 0;
+    border-top: 1px solid var(--linea-oscura);
+  }
+}
+
+/* Celular: todo en una sola columna */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 72px 0 64px;
+  }
+
+  .hero-title::after {
+    margin-top: 22px;
+  }
+
+  .hero-lead {
+    font-size: 1.0625rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-btn {
+    align-self: stretch;
+  }
+
+  .feature {
+    padding: 28px 24px;
+  }
+
+  .cta-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Formulario en una sola columna */
+  .quote-form {
+    padding: 24px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 56px;
+  }
+}
+
+
+/* ==================================================================
+   14. PÁGINAS DE CATEGORÍA (ej. gases-criogenicos.html)
+   Hero pequeño, migas de pan, filtros laterales y grid de productos.
+   Las demás líneas (tubería, conexiones, etc.) reutilizan esto.
+   ================================================================== */
+
+/* ---------- Hero pequeño ---------- */
+.page-hero {
+  position: relative;
+  margin-top: var(--alto-header);  /* Compensa el header fijo */
+  padding: 56px 0 64px;
+  color: var(--blanco);
+  background-color: var(--negro-carbon);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  border-bottom: 3px solid var(--cobre);
+}
+
+/* Migas de pan: Inicio / Productos / Válvulas */
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gris-claro);
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 8px;
+  color: var(--cobre);
+}
+
+.breadcrumb a {
+  color: var(--gris-claro);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--blanco);
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--blanco);
+}
+
+/* Código de línea sobre el título */
+.page-hero-code {
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cobre-claro);
+}
+
+.page-hero-title {
+  max-width: 22ch;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: clamp(2rem, 3vw + .75rem, 3rem);
+  line-height: 1.15;
+  color: var(--blanco);
+}
+
+/* Línea de cobre de 3px bajo el título (igual que en el inicio) */
+.page-hero-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin-top: 20px;
+  background: var(--cobre);
+}
+
+.page-hero-lead {
+  max-width: 62ch;
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--gris-claro);
+}
+
+/* ---------- Diseño del catálogo: filtros + productos ---------- */
+.catalog {
+  padding-top: 56px;
+}
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---------- Filtros ---------- */
+.filters {
+  position: sticky;
+  top: calc(var(--alto-header) + 24px);  /* Se queda fijo al bajar */
+}
+
+.filters-box {
+  background: var(--blanco);
+  border: 1px solid var(--gris-linea);
+  border-top: 3px solid var(--cobre);
+  border-radius: var(--radio);
+  padding: 20px;
+}
+
+/* Título "Filtrar productos" (se puede tocar para plegar en celular) */
+.filters-summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-titulos);
+  font-weight: 700;
+  font-size: .875rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--negro-carbon);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Signo + / – a la derecha del título */
+.filters-summary::after {
+  content: "+";
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  color: var(--cobre-oscuro);
+}
+
+.filters-box[open] .filters-summary::after {
+  content: "–";
+}
+
+.filter-group {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gris-linea);
+}
+
+.filter-title {
+  margin: 0 0 10px;
+  line-height: 1.2;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gris-acero);
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Botón de filtro tipo "chip" */
+.filter-chip {
+  min-height: 36px;
+  padding: 0 12px;
+  font-family: var(--font-texto);
+  font-size: .875rem;
+  color: var(--negro-carbon);
+  background: var(--blanco);
+  border: 1px solid var(--gris-linea);
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+
+.filter-chip:hover {
+  border-color: var(--azul);
+  color: var(--azul);
+}
+
+/* Filtro activo: Azul Criogénico */
+.filter-chip[aria-pressed="true"] {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: var(--blanco);
+}
+
+.filters-clear {
+  margin-top: 20px;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--azul);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ---------- Productos ---------- */
+.catalog-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gris-linea);
+}
+
+.catalog-count {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: .8125rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gris-acero);
+}
+
+/* Grid de 2 columnas cuando hay filtros a un lado */
+.product-grid.product-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Tarjeta oculta por los filtros */
+.product-card[hidden] {
+  display: none;
+}
+
+.catalog-empty {
+  padding: 40px 24px;
+  text-align: center;
+  background: var(--gris-niebla);
+  border: 1px dashed var(--gris-linea);
+  border-radius: var(--radio);
+  color: var(--gris-acero);
+}
+
+.catalog-note {
+  margin: 24px 0 0;
+  font-size: .8125rem;
+  color: var(--gris-acero);
+}
+
+.catalog-note .mono {
+  color: var(--cobre-oscuro);
+}
+
+/* ---------- Responsivo de páginas de categoría ---------- */
+@media (max-width: 860px) {
+  /* Filtros arriba, productos abajo */
+  .catalog-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .filters {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero {
+    padding: 40px 0 48px;
+  }
+
+  .catalog {
+    padding-top: 32px;
+  }
+
+  /* Productos en una sola columna */
+  .product-grid.product-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================================
+   15. AVISO DE PRIVACIDAD (aviso-privacidad.html)
+   Texto legal en una columna angosta para que se lea cómodo.
+   ================================================================== */
+.legal-body > * {
+  max-width: 760px;
+}
+
+.legal-body h2 {
+  font-family: var(--font-titulos);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--negro-carbon);
+  margin: 2rem 0 .6rem;
+}
+
+.legal-body h2:first-child {
+  margin-top: 0;
+}
+
+.legal-body p {
+  color: var(--gris-acero);
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.legal-body a {
+  color: var(--azul);
+}
+
+.legal-body ul {
+  list-style: disc;
+  color: var(--gris-acero);
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+}
+
+.legal-body strong {
+  color: var(--negro-carbon);
+  font-weight: 600;
+}
+
+.legal-fecha {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gris-linea);
+  font-family: var(--font-mono);
+  font-size: .85rem;
+}

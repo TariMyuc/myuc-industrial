@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Imagen de producto pendiente">
+  <!-- Imagen de relleno: reemplazar por la foto real de cada línea de producto (proporción 16:10) -->
+  <rect width="640" height="400" fill="#F2F3F4"/>
+  <g fill="none" stroke="#D5D9DC" stroke-width="2">
+    <path d="M0 100H640M0 200H640M0 300H640M160 0V400M320 0V400M480 0V400"/>
+  </g>
+  <!-- Tubo estilizado -->
+  <g transform="translate(320 185)">
+    <rect x="-150" y="-26" width="300" height="52" rx="4" fill="#5F6B73"/>
+    <rect x="-150" y="-26" width="300" height="14" rx="4" fill="#7B868D"/>
+    <ellipse cx="150" cy="0" rx="14" ry="26" fill="#1C1F22"/>
+    <ellipse cx="150" cy="0" rx="8" ry="17" fill="#5F6B73"/>
+    <rect x="-176" y="-34" width="30" height="68" rx="3" fill="#B87333"/>
+  </g>
+  <text x="320" y="300" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" letter-spacing="2" fill="#5F6B73">IMAGEN PRÓXIMAMENTE</text>
+</svg>
