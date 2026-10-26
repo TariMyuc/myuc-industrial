@@ -392,8 +392,10 @@ address {
   background-image:
     linear-gradient(90deg, rgba(28, 31, 34, 1) 30%, rgba(28, 31, 34, .6) 100%),
     linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
-  background-size: auto, 56px 56px, 56px 56px;
+    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px),
+    url("../img/hero.jpg");
+  background-size: auto, 56px 56px, 56px 56px, cover;
+  background-position: 0 0, 0 0, 0 0, center;
 }
 
 /* Detalle técnico: bloque diagonal de líneas a la derecha (solo escritorio) */
