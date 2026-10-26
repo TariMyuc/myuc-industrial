@@ -621,6 +621,7 @@ address {
 }
 
 .product-specs dt {
+  flex-shrink: 0;        /* la etiqueta no se parte; el valor es el que se acomoda */
   color: var(--gris-acero);
   text-transform: uppercase;
   letter-spacing: .06em;
@@ -635,7 +636,10 @@ address {
 /* El botón se queda pegado abajo aunque el contenido mida distinto */
 .product-card-btn {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: stretch;   /* ocupa el ancho de la tarjeta: botones parejos entre tarjetas */
+  text-align: center;    /* si el texto se parte en dos líneas, queda centrado */
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 

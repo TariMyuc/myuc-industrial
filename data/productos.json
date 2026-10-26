@@ -850,7 +850,7 @@
           "valor": "¼\" a 6\""
         },
         {
-          "nombre": "Hexagonal / cuadrada",
+          "nombre": "Hex. / cuadrada",
           "valor": "¼\" a 2\""
         }
       ],
@@ -1028,7 +1028,7 @@
           "valor": "-196 a 93 °C, limpio para O₂"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · Chart · RegO"
         }
       ],
@@ -1075,7 +1075,7 @@
           "valor": "Latón, internos inox 303"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · RegO"
         }
       ],
@@ -1111,7 +1111,7 @@
       "especificaciones": [
         {
           "nombre": "Conexión",
-          "valor": "¼\" NPT + puertos de manómetro"
+          "valor": "¼\" NPT, 2 puertos manómetro"
         },
         {
           "nombre": "Ajuste",
@@ -1122,7 +1122,7 @@
           "valor": "-196 a 93 °C"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · RegO"
         }
       ],
@@ -1169,7 +1169,7 @@
           "valor": "Latón, sellos EPDM para CO₂"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · Harris · Victor"
         }
       ],
@@ -1216,7 +1216,7 @@
           "valor": "5 psi, latón CDA-360"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · RegO"
         }
       ],
@@ -1263,7 +1263,7 @@
           "valor": "-196 °C"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · RegO · Chart"
         }
       ],
@@ -1299,7 +1299,7 @@
       "especificaciones": [
         {
           "nombre": "Entrada",
-          "valor": "¼\" y ½\" NPT o doble férula"
+          "valor": "¼\" y ½\" NPT · férula"
         },
         {
           "nombre": "Ajuste",
@@ -1310,7 +1310,7 @@
           "valor": "Hasta -254 °C"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant"
         }
       ],
@@ -1356,7 +1356,7 @@
           "valor": "Latón o inox 316"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · RegO"
         }
       ],
@@ -1404,7 +1404,7 @@
           "valor": "DOT 4L"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant · Chart"
         }
       ],
@@ -1451,7 +1451,7 @@
           "valor": "Industrial y medicinal"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Generant"
         }
       ],
@@ -1500,7 +1500,7 @@
           "valor": "Latón"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Varios fabricantes"
         }
       ],
@@ -1536,14 +1536,14 @@
       "especificaciones": [
         {
           "nombre": "Tipo",
-          "valor": "Kits de sello · Resortes · Diafragmas"
+          "valor": "Kits de sello y resorte"
         },
         {
           "nombre": "Uso",
           "valor": "Reguladores, válvulas y manifolds"
         },
         {
-          "nombre": "Marcas disponibles",
+          "nombre": "Marcas",
           "valor": "Según el equipo a reparar"
         }
       ],
